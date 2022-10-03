@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import GirlOnline from '../../assets/img/jpg/kindle.jpg';
+import imgAlcohol from '../../assets/img/jpg/alcohol.jpg';
 import { Helmet } from 'react-helmet'
 
 import './Home.css'
@@ -26,12 +26,7 @@ const Home = () => {
         />
       </Helmet>
       <div className='home'>
-        <Link to={`/${lang}/our-services`}>
-          <div>
-            {lang === 'es' ? 'Clases de Idioma online' : 'Online language classes'}
-            <img src={GirlOnline} width={500} alt='¡Clases online!' />
-          </div>
-        </Link>
+        <img src={imgAlcohol} alt='Bebidas alcoholicas' />
       </div>
     </>
   )

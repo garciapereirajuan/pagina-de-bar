@@ -2,14 +2,16 @@ import { useEffect, useState, useContext } from 'react'
 import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
 // import infinityLogo from './assets/img/jpg/infinity-logo.png';
 import socialLogo from './assets/img/jpg/social-logo-transparent-2.png'
-import emoji from './assets/img/png/emoji-3.png'
+import emojiGuiño from './assets/img/png/emoji-3.png'
+import emojiGafas from './assets/img/png/emoji-5.png'
+import imgBanner from './assets/img/jpg/alcohol.jpg'
 import Home from './components/Home'
 import OurServices from './components/Services'
 import AboutUs from './components/AboutUs'
 import Contact from './components/ContactUs'
-import { BsTranslate } from 'react-icons/bs'
-import { FaHome, FaFacebook, FaCopyright } from 'react-icons/fa'
-import { FiMenu } from 'react-icons/fi'
+import { BsTranslate, BsWhatsapp } from 'react-icons/bs'
+import { FaHome, FaFacebook, FaCopyright, FaWhatsapp } from 'react-icons/fa'
+import { FiInstagram, FiMenu } from 'react-icons/fi'
 import { BsLightbulbFill } from 'react-icons/bs'
 import { MdMailOutline } from 'react-icons/md'
 import { AiFillInstagram } from 'react-icons/ai'
@@ -23,7 +25,7 @@ function App() {
   const [background, setBackground] = useState('')
   const [socialBar, setSocialBar] = useState('')
   const [select, setSelect] = useState('')
-  const [title, setTitle] = useState('Tu bar amigo')
+  const [title, setTitle] = useState(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>)
   const [lang, setLang] = useState('es')
   const [finishAnimationTitle, setFinishAnimationTitle] = useState(false)
   const location = useLocation()
@@ -50,7 +52,7 @@ function App() {
     const titles = {
       [`/${lang}/`]: 'Tu bar amigo',
       [`/${lang}/home`]: 'Tu bar amigo',
-      [`/${lang}/our-services`]: lang === 'es' ? 'Nuestros servicios' : 'Our services',
+      [`/${lang}/our-services`]: lang === 'es' ? 'Servicios' : 'Our services',
       [`/${lang}/about-us`]: lang === 'es' ? '¿Quiénes somos?' : 'About us',
       [`/${lang}/contact`]: lang === 'es' ? 'Contacto' : 'Contact us'
     }
@@ -72,7 +74,7 @@ function App() {
       document.querySelectorAll('.content')[0].classList.remove('animation-content')
     }, 355)
 
-    setTitle(titles[location.pathname])
+    // setTitle(titles[location.pathname])
     setSelect(btnClass[location.pathname])
     setSelect('')
 
@@ -115,31 +117,16 @@ function App() {
 
   useEffect(() => {
     setTitle('Tu bar, amigo')
-    setTimeout(() => setTitle('Tu bar, amig@'), 4700)
-    setTimeout(() => setTitle(<span>Tu bar amigo  <img src={emoji} width={46} alt='Emoji guiño' /></span>), 7450)
-    setTimeout(() => setFinishAnimationTitle(true), 7550)
-
+    setTimeout(() => setTitle('Tu bar, amig@'), 4620)
+    setTimeout(() => setTitle(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>), 7350)
+    setTimeout(() => setFinishAnimationTitle(true), 10550)
   }, [])
 
-  const changeTitle = () => {
-    const newTitle = [
-      'Tu bar, amigo',
-      'Tu bar, amig@'
-    ]
-
+  const changeTitle = (emoji) => {
     if (!finishAnimationTitle) {
       return
     }
-
-    if (title !== newTitle[0] && title !== newTitle[1]) {
-      setTitle(newTitle[0])
-      return
-    }
-    if (title === newTitle[0]) {
-      setTitle(newTitle[1])
-      return
-    }
-    setTitle(<span>Tu bar amigo  <img src={emoji} width={46} alt='Emoji guiño' /></span>)
+    setTitle(<span>Tu bar amigo  <img src={emoji} width={46} alt='Emoji gafas' /></span>)
   }
 
 
@@ -161,14 +148,14 @@ function App() {
         <div
           className='header-home__logo'
         >
-          <Link to={`/${lang}/home`}>
+          <div onClick={() => changeTitle(emojiGafas)}>
             {/* <InfinityLogo /> */}
             <img src={socialLogo} alt='Social-Logo' width='150px' />
-          </Link>
+          </div>
         </div>
         <div
           className='header-home__title'
-          onClick={changeTitle}
+          onClick={() => changeTitle(emojiGuiño)}
         >
           <div>
             <p>{title}</p>
@@ -180,7 +167,7 @@ function App() {
           <FiMenu />
         </div>
       </div>
-      <div className='menu'>
+      <div className={`menu ${socialBar}`}>
         <div
           id={`/${lang}/home`}
           className={select}
@@ -188,83 +175,72 @@ function App() {
         >
           <FaHome />
         </div>
+        <div className='social-icon'>
+          <IoLogoWhatsapp />
+        </div>
         <div
           id={`/${lang}/our-services`}
           className={select}
           onClick={() => navigate(`/${lang}/our-services`)}
         >
-          {lang === 'es' ? 'Nuestros servicios' : 'Our services'}
+          {lang === 'es' ? 'Te ofrecemos...' : 'Our services'}
         </div>
-        <div
+        {/* <div
           id={`/${lang}/about-us`}
           className={select}
           onClick={() => navigate(`/${lang}/about-us`)}
         >
           {lang === 'es' ? 'Quiénes somos' : 'About us'}
+        </div> */}
+        <div
+          id={`/${lang}/contact`}
+          className={select}
+          onClick={() => navigate(`/${lang}/contact`)}
+        >
+          {lang === 'es' ? 'Galería' : 'Contact us'}
         </div>
         <div
           id={`/${lang}/contact`}
           className={select}
           onClick={() => navigate(`/${lang}/contact`)}
         >
-          {lang === 'es' ? 'Contacto' : 'Contact us'}
+          {lang === 'es' ? 'Estamos en...' : 'Contact us'}
         </div>
-        <div
-          // id='/'
-          className={select}
-          onClick={() => {
-            const path = location.pathname.split('/')[2]
-            console.log(path)
-
-            if (lang === 'es') {
-              setLang('en')
-              localStorage.setItem('lang', 'en')
-              navigate(`/en/${path}`)
-            } else {
-              setLang('es')
-              localStorage.setItem('lang', 'es')
-              navigate(`/es/${path}`)
-            }
-          }
-          }
-        >
-          <BsTranslate />
+        <div className='social-icon'>
+          <AiFillInstagram />
+        </div>
+        <div className='social-icon'>
+          <FaFacebook />
         </div>
       </div>
+      <div className='banner'>
+        <div className='text'>
+          <p>Tenemos<br /> los mejores traguitos<br /> y la comida más rica</p>
+          <p>OPEN DOOR<br /><span>19:30hs</span></p>
+        </div>
+        <img src={imgBanner} alt='Bebidas alcoholicas' />
+      </div>
+      <div className='services'>
+
+      </div>
       <div className='content'>
-        <Routes>
+        {/* <Routes>
           <Route path={`/${lang}/home`} element={<Home />} />
           <Route path={`/${lang}/our-services`} element={<OurServices lang={lang} />} />
           <Route path={`/${lang}/about-us`} element={<AboutUs />} />
           <Route path={`/${lang}/contact`} element={<Contact />} />
-        </Routes>
-        <div className='slogan'>
-          {
-            lang === 'es'
-              ? (
-                <div>
-                  “ Trabajamos con un universo infinito de posibilidades
-                  y conexiones: <span>idiomas</span> ”
-                </div>
-              ) : (
-                <div>
-                  “ We work with an infinite
-                  universe of possibilities
-                  and connections: <span>languages</span> ”
-                </div>
-              )
-          }
-        </div>
-        <div className='footer'>
-          <FaCopyright /> 2022 -
-          <a
-            href='https://juangarciapereira.web.app/projects'
-            target='_blank'
-            rel='noreferrer'
-          >
-            JUAN G.P.
-          </a>
-        </div>
+        </Routes> */}
+
+      </div>
+      <div className='footer'>
+        <FaCopyright /> 2022 -
+        <a
+          href='https://juangarciapereira.web.app/projects'
+          target='_blank'
+          rel='noreferrer'
+        >
+          JUAN G.P.
+        </a>
       </div>
     </div >
   );
