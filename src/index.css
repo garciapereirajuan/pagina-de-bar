@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Ruqaa';
+  src: url('./fonts/Aref_Ruqaa_Ink/ArefRuqaaInk-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('./fonts/Quicksand/static/Quicksand-Light.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'QuicksandBold';
+  src: url('./fonts/Quicksand/static/Quicksand-Bold.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('./fonts/Nunito/static/Nunito-Black.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Bebas';
+  src: url('./fonts/Bebas_Neue/BebasNeue-Regular.ttf') format('TrueType');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
