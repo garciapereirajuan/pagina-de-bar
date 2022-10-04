@@ -31,21 +31,21 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
             <Helmet>
             </Helmet>
             <div className='services'>
-                <div className={`services__title ${scrollRotateFirst}`}>
-                    <h3>Te ofrecemos...</h3>
-                </div>
                 <div className='services__content'>
+                    <div className={`services__title ${scrollRotateFirst}`}>
+                        <h3>Te ofrecemos...</h3>
+                    </div>
                     <div className='services__content-subtitle'>
-                        <h3>¡La mejor cena!</h3>
+                        <h3>¡La mejor comida!</h3>
                     </div>
                     <div className='services__content-row'>
                         <Row>
-                            <Col xs={0} md={1} />
-                            <Col xs={24} md={22} >
-                                <Row gutter={[10, 10]}  >
+                            <Col xs={0} sm={0} md={0} />
+                            <Col xs={24} sm={24} md={24} >
+                                <Row  >
                                     {
                                         imgFood.map(item => (
-                                            <Col xs={11} md={8} lg={7}>
+                                            <Col className='services__row__col' xs={23} sm={11} md={7} lg={7}>
                                                 < Card
                                                     cover={< img src={item.img} />}
                                                 >
@@ -56,26 +56,31 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                                     }
                                 </Row>
                             </Col>
-                            <Col xs={0} md={1} />
+                            <Col xs={0} sm={12} md={0} />
                         </Row>
+                    </div>
+                    <div className='services__content-sheet'>
+                        <div className='services__content-sheet__btn'>
+                            Ver más...
+                        </div>
                     </div>
                 </div>
                 <br /><br />
-                <div className={`services__title ${scrollRotateSecond}`}>
-                    <h3>Y por supuesto...</h3>
-                </div>
                 <div className='services__content'>
+                    <div className={`services__title ${scrollRotateSecond}`}>
+                        <h3>Y por supuesto...</h3>
+                    </div>
                     <div className='services__content-subtitle'>
-                        <h3>¡La mejor noche!</h3>
+                        <h3>¡Los mejores tragos!</h3>
                     </div>
                     <div className='services__content-row'>
                         <Row>
-                            <Col xs={0} md={1} />
-                            <Col xs={24} md={22} >
-                                <Row gutter={[10, 10]}  >
+                            <Col xs={0} sm={0} md={0} />
+                            <Col xs={24} sm={24} md={24} >
+                                <Row  >
                                     {
                                         imgDrink.map(item => (
-                                            <Col xs={11} md={8} lg={7}>
+                                            <Col className='services__row__col' xs={23} sm={11} md={7} lg={7}>
                                                 < Card
                                                     cover={< img src={item.img} />}
                                                 >
@@ -86,8 +91,13 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                                     }
                                 </Row>
                             </Col>
-                            <Col xs={0} md={1} />
+                            <Col xs={0} sm={0} md={1} />
                         </Row>
+                    </div>
+                    <div className='services__content-sheet'>
+                        <div className='services__content-sheet__btn'>
+                            Ver más...
+                        </div>
                     </div>
                 </div>
             </div >

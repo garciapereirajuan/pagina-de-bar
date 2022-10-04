@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from 'react'
 import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom'
 // import infinityLogo from './assets/img/jpg/infinity-logo.png';
-import socialLogo from './assets/img/jpg/social-logo-transparent-2.png'
+import socialLogo from './assets/img/jpg/social-logo-transparent-3.png'
 import emojiGuiño from './assets/img/png/emoji-3.png'
 import emojiGafas from './assets/img/png/emoji-5.png'
 import imgBanner from './assets/img/jpg/alcohol.jpg'
@@ -115,7 +115,7 @@ function App() {
       setScrollRotateFirst('scroll-rotate-first')
     }
 
-    if (y >= 1200) {
+    if (y >= 1400) {
       setScrollRotateSecond('scroll-rotate-second')
     }
     console.log(y)
@@ -124,22 +124,22 @@ function App() {
       setScrollRotateFirst('')
     }
 
-    if (y < 1200) {
+    if (y < 1400) {
       setScrollRotateSecond('')
     }
   };
 
-  useEffect(() => {
-    setTitle('Tu bar, amigo')
-    setTimeout(() => setTitle('Tu bar, amig@'), 4620)
-    setTimeout(() => setTitle(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>), 7350)
-    setTimeout(() => setFinishAnimationTitle(true), 10550)
-  }, [])
+  // useEffect(() => {
+  //   setTitle('Tu bar, amigo')
+  //   setTimeout(() => setTitle('Tu bar, amig@'), 4620)
+  //   setTimeout(() => setTitle(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>), 7350)
+  //   setTimeout(() => setFinishAnimationTitle(true), 10550)
+  // }, [])
 
   const changeTitle = (emoji) => {
-    if (!finishAnimationTitle) {
-      return
-    }
+    // if (!finishAnimationTitle) {
+    //   return
+    // }
     setTitle(<span>Tu bar amigo  <img src={emoji} width={46} alt='Emoji gafas' /></span>)
   }
 

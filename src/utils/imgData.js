@@ -4,12 +4,12 @@ import food3 from '../assets/img/jpg/food-3.jpg'
 import food4 from '../assets/img/jpg/food-4.jpg'
 import food5 from '../assets/img/jpg/food-5.jpg'
 import food6 from '../assets/img/jpg/food-6.jpg'
-import drink1 from '../assets/img/jpg/dj-2.jpg'
-import drink2 from '../assets/img/jpg/drink-2.jpg'
-import drink3 from '../assets/img/jpg/drink-3.jpg'
-import drink4 from '../assets/img/jpg/drink-4.jpg'
-import drink5 from '../assets/img/jpg/bar-background.jpg'
-import drink6 from '../assets/img/jpg/drink-6.jpg'
+import drink1 from '../assets/img/jpg/drink-2.jpg'
+import drink2 from '../assets/img/jpg/drink-5.jpg'
+import drink3 from '../assets/img/jpg/drink-7.jpg'
+import drink4 from '../assets/img/jpg/drink-8.jpg'
+import drink5 from '../assets/img/jpg/drink-4.jpg'
+import drink6 from '../assets/img/jpg/drink-3.jpg'
 
 export const imgFood = [
     {
@@ -47,12 +47,17 @@ export const imgFood = [
 export const imgDrink = [
     {
         img: drink2,
-        title: 'Las coronas más frías :P',
+        title: 'Nombre',
         description: 'Una descripción o algo...'
     },
     {
-        img: drink1,
-        title: 'En Matute..',
+        img: drink4,
+        title: 'Nombre',
+        description: 'Una descripción o algo...'
+    },
+    {
+        img: drink5,
+        title: 'Nombre',
         description: 'Una descripción o algo...'
     },
     {
@@ -65,14 +70,10 @@ export const imgDrink = [
         title: 'Nombre',
         description: 'Una descripción o algo...'
     },
+
     {
-        img: drink4,
-        title: 'Nombre',
-        description: 'Una descripción o algo...'
-    },
-    {
-        img: drink5,
-        title: 'Nombre',
+        img: drink1,
+        title: 'Birraaa',
         description: 'Una descripción o algo...'
     },
 ]
