@@ -33,6 +33,11 @@
   src: url('./fonts/Satisfy/Satisfy-Regular.ttf') format('TrueType');
 }
 
+@font-face {
+  font-family: 'Nanum';
+  src: url('./fonts/Nanum_Pen_Script/NanumPenScript-Regular.ttf') format('TrueType');
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -18,12 +18,16 @@ import { AiFillInstagram } from 'react-icons/ai'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import { motion } from 'framer-motion'
 import { MenuContext } from 'react-flexible-sliding-menu'
+import imgData from './utils/imgData'
+import { Card, Row, Col } from 'antd'
 
 import './App.css';
 
 function App() {
   const [background, setBackground] = useState('')
   const [socialBar, setSocialBar] = useState('')
+  const [scrollRotateFirst, setScrollRotateFirst] = useState('')
+  const [scrollRotateSecond, setScrollRotateSecond] = useState('')
   const [select, setSelect] = useState('')
   const [title, setTitle] = useState(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>)
   const [lang, setLang] = useState('es')
@@ -106,12 +110,22 @@ function App() {
   }, [lang, location, navigate])
   window.onscroll = function () {
     var y = window.scrollY;
-    if (y >= 0 && socialBar === '') {
+    if (y >= 180) {
       setSocialBar('bg-scroll-social')
+      setScrollRotateFirst('scroll-rotate-first')
+    }
+
+    if (y >= 1200) {
+      setScrollRotateSecond('scroll-rotate-second')
     }
     console.log(y)
-    if (y < 10) {
+    if (y < 180) {
       setSocialBar('')
+      setScrollRotateFirst('')
+    }
+
+    if (y < 1200) {
+      setScrollRotateSecond('')
     }
   };
 
@@ -154,7 +168,7 @@ function App() {
           </div>
         </div>
         <div
-          className='header-home__title'
+          className={`header-home__title`}
           onClick={() => changeTitle(emojiGuiño)}
         >
           <div>
@@ -220,9 +234,9 @@ function App() {
         </div>
         <img src={imgBanner} alt='Bebidas alcoholicas' />
       </div>
-      <div className='services'>
+      <div className='services__background' />
+      <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
 
-      </div>
       <div className='content'>
         {/* <Routes>
           <Route path={`/${lang}/home`} element={<Home />} />
@@ -242,7 +256,9 @@ function App() {
           JUAN G.P.
         </a>
       </div>
+
     </div >
+
   );
 }
 

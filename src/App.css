@@ -73,12 +73,12 @@
 .header-home {
   position: absolute;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   top: 0;
   width: 100%;
-  height: 220px;
+  height: 160px;
   padding-top: 54px;
   padding-bottom: 4px;
   background: #e6e6e6;
@@ -93,8 +93,8 @@
   align-items: center;
   top: 0;
   padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+  /* padding-left: 20px; */
+  /* padding-right: 20px; */
   border-radius: 4px;
   transition: all ease .2s;
   -moz-transition: all ease .2s;
@@ -116,6 +116,13 @@
   -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, .7);
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .7);
 }
+
+/* .header-home__logo {
+  padding: 4px 0;
+  text-align: center;
+  background: #373737;
+  width: 100%;
+} */
 
 .header-home__logo div {
   border-radius: 50%;
@@ -155,6 +162,21 @@
   border-radius: 4px;
   /* box-shadow: 0 0px 8px rgba(0, 0, 0, .3); */
   transition: all ease .3s;
+}
+
+.header-home__title.bg-scroll-social {
+  position: fixed;
+  top: 50px;
+  background: #e6e6e6;
+  z-index: 4;
+  transition: all ease .2s;
+}
+
+@media (max-width: 900px) {
+  .header-home__title.bg-scroll-social {
+    top: 0;
+    transition: all ease .2s;
+  }
 }
 
 .header-home__title div {
@@ -282,18 +304,17 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  top: 4px;
+  top: 0;
+  padding: 4px 0;
   transition: all ease .2s;
+
 }
 
 .menu.bg-scroll-social {
   position: fixed;
   top: 0px;
-  height: 40px;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  background-color: rgba(255, 255, 255, .8);
-  z-index: 4;
+  z-index: 5;
+  background-color: #373737;
 }
 
 .menu div,
@@ -357,11 +378,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 278px;
+  margin-top: 218px;
   width: 100%;
-  height: calc(100vh - 278px);
+  height: calc(100vh - 218px);
   background-color: #000;
   overflow: hidden;
+
 }
 
 .banner .text {
@@ -427,11 +449,12 @@
   justify-content: center;
   width: max-content;
   padding: 20px;
-  border: 8px solid #8a8a8a;
-  box-shadow: 2px 4px 8px 10px rgba(0, 0, 0, .3);
+  border: 8px solid rgb(67, 254, 83);
+  box-shadow: 2px 4px 8px 10px rgba(67, 254, 108, 0.3), 0px 2px 8px rgba(0, 0, 0, .8);
   border-radius: 24px;
   text-align: right;
   background: rgba(0, 0, 0, .5);
+  /* background-image: url('./assets/img/jpg/image-textura.jpg') */
 }
 
 .banner .text p:last-child span {
@@ -451,13 +474,148 @@
 }
 
 .services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   position: relative;
   /* top: calc(100vh); */
-  height: 500px;
+  min-height: calc(100vh - 50px);
   width: 100%;
-  background-color: #e6e6e6;
+  /* background-color: rgb(253, 192, 135); */
+
+  background: #e6e6e6;
+  border-top: 2px solid #373737;
+  padding-top: 20px;
   /* z-index: 2; */
 }
+
+
+.services__title {
+  width: 50%;
+  text-align: center;
+  font-family: 'Satisfy';
+  font-size: 60px;
+  color: #373737;
+  background: #e6e6e6;
+  border: 10px solid #373737;
+  /* border-top: 10px solid #373737; */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .9);
+  margin-bottom: 20px;
+  position: relative;
+  rotate: 0;
+  transition: all ease .2s;
+}
+
+.services__title::before {
+  position: absolute;
+  top: 4px;
+  margin-left: 0px;
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #373737;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .7);
+}
+
+.services__title.scroll-rotate-first {
+  transition: all ease 1s;
+  rotate: -10deg;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, .9);
+  z-index: 4;
+}
+
+.services__title.scroll-rotate-first::before {
+  transition: all ease 1s;
+  width: 12px;
+  margin-left: 2px;
+}
+
+.services__title.scroll-rotate-second {
+  transition: all ease 1s;
+  rotate: 10deg;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, .9);
+  z-index: 4;
+}
+
+.services__title.scroll-rotate-second::before {
+  transition: all ease 1s;
+  width: 12px;
+  margin-left: -4px;
+}
+
+@media (max-width: 800px) {
+  .services__title {
+    width: 90%;
+  }
+}
+
+.services__content-subtitle {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  font-family: 'Bebas';
+  /* background: red; */
+  font-size: 70px;
+  width: 100%;
+}
+
+.services__content {
+  margin-bottom: 40px;
+}
+
+.services__content:last-child {
+  background-image: url('./assets/img/jpg/drinks-night.jpg');
+  background-position: center center;
+  background-attachment: scroll;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.services__content:last-child::before {
+  position: absolute;
+  content: '';
+  margin-top: -2px;
+  width: 100%;
+  height: 20px;
+  background: #e6e6e6;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 2px 10px #e6e6e6;
+}
+
+
+@keyframes animation-points {}
+
+
+.ant-row {
+  justify-content: center;
+}
+
+.courses-list__course {
+  /* padding: 12px !important; */
+  display: flex !important;
+  justify-content: center !important;
+
+}
+
+.ant-card {
+  border-radius: 24px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
+}
+
+.ant-card-cover {
+  display: flex;
+  align-items: center;
+  background-color: #373737;
+  overflow: hidden !important;
+  height: 30vh;
+  border-radius: 24px 24px 0 0;
+}
+
+.ant-card-body div {}
+
 
 .content {
   position: absolute;
@@ -622,7 +780,11 @@
 
   .menu-slider {
     left: 6px;
-    margin-top: 16px;
+    top: 10px;
+  }
+
+  .menu-slider.bg-scroll-social {
+    /* top: 70px; */
   }
 
   .menu-slider div {
