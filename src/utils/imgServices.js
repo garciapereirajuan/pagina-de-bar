@@ -15,32 +15,32 @@ export const imgFood = [
     {
         img: food1,
         title: 'Papas fritas',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
     {
         img: food2,
-        title: 'Sandwich de jamón y rúcula',
-        description: 'Creo que se llama así'
+        title: 'Jamón y rúcula',
+        description: '$400'
     },
     {
         img: food3,
         title: 'Las mejores ensaladas',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
     {
         img: food4,
         title: 'Papas rústicas',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
     {
         img: food5,
         title: 'Sandwich de fiambres',
-        description: 'Me agarró un hambre...'
+        description: 'Ya me agarró hambre...'
     },
     {
         img: food6,
         title: 'Otros sandwichs',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
 ]
 
@@ -48,32 +48,32 @@ export const imgDrink = [
     {
         img: drink2,
         title: 'Nombre',
-        description: 'Una descripción o algo...'
+        description: '$400'
     },
     {
         img: drink4,
         title: 'Nombre',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
     {
         img: drink5,
         title: 'Nombre',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
     {
         img: drink3,
         title: 'Nombre',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
     {
         img: drink6,
         title: 'Nombre',
-        description: 'Una descripción o algo...'
+        description: 'Una descripción o precio...'
     },
 
     {
         img: drink1,
-        title: 'Birraaa',
-        description: 'Una descripción o algo...'
+        title: 'Nombre',
+        description: 'Una descripción o precio...'
     },
 ]

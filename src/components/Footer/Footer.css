@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 0;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 38px;
+    background: rgba(255, 255, 255, .8);
+    font-family: QuicksandBold;
+    border: 1px solid rgba(255, 255, 255, .8);
+    color: #373737;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.footer>svg {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.footer a {
+    margin-left: 4px;
+    margin-right: 4px;
+    color: #373737;
+}
+
+.footer a:hover {
+    color: rgba(87, 87, 87, 1)
+}

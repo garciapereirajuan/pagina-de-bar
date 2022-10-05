@@ -6,13 +6,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MenuProvider from 'react-flexible-sliding-menu'
-import Menu from './components/Menu'
+import MenuSlider from './components/MenuSlider'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-      <MenuProvider MenuComponent={Menu}>
+      <MenuProvider MenuComponent={MenuSlider}>
         <App />
       </MenuProvider>
     </Router>

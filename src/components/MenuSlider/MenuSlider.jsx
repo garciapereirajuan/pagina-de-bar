@@ -4,7 +4,7 @@ import { MenuContext } from 'react-flexible-sliding-menu'
 import { BsTranslate } from 'react-icons/bs'
 import { FaHome } from 'react-icons/fa'
 
-import './Menu.css'
+import './MenuSlider.css'
 
 const DashboardSVG = () => (
     <svg

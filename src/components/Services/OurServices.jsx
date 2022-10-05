@@ -1,30 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import React from 'react'
 import { Helmet } from 'react-helmet'
-import { imgFood, imgDrink } from '../../utils/imgData'
+import { imgFood, imgDrink } from '../../utils/imgServices'
 import { Row, Col, Card } from 'antd'
 
 import 'antd/es/card/style/index.css';
 import 'antd/es/grid/style/index.css';
+import './OurServices.css';
 
 const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
-
-    const [lang, setLang] = useState(localStorage.getItem('lang'))
-    const location = useLocation()
-
-    useEffect(() => {
-
-        // window.onscroll = function () {
-        //     var y = window.scrollY;
-        //     if (y >= 10 && scrollRotate === '') {
-        //         setScrollRotate('scroll-rotate')
-        //     }
-        //     console.log(y, 'Desde OurServices')
-        //     if (y < 10) {
-        //         setScrollRotate('')
-        //     }
-        // }
-    }, [])
 
     return (
         <>
@@ -42,19 +25,7 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                         <Row>
                             <Col xs={0} sm={0} md={0} />
                             <Col xs={24} sm={24} md={24} >
-                                <Row  >
-                                    {
-                                        imgFood.map(item => (
-                                            <Col className='services__row__col' xs={23} sm={11} md={7} lg={7}>
-                                                < Card
-                                                    cover={< img src={item.img} />}
-                                                >
-                                                    <Card.Meta title={item.title} description={item.description} />
-                                                </Card>
-                                            </Col>
-                                        ))
-                                    }
-                                </Row>
+                                <RenderImages imagesArray={imgFood} />
                             </Col>
                             <Col xs={0} sm={12} md={0} />
                         </Row>
@@ -77,19 +48,7 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                         <Row>
                             <Col xs={0} sm={0} md={0} />
                             <Col xs={24} sm={24} md={24} >
-                                <Row  >
-                                    {
-                                        imgDrink.map(item => (
-                                            <Col className='services__row__col' xs={23} sm={11} md={7} lg={7}>
-                                                < Card
-                                                    cover={< img src={item.img} />}
-                                                >
-                                                    <Card.Meta title={item.title} description={item.description} />
-                                                </Card>
-                                            </Col>
-                                        ))
-                                    }
-                                </Row>
+                                <RenderImages imagesArray={imgDrink} />
                             </Col>
                             <Col xs={0} sm={0} md={1} />
                         </Row>
@@ -102,6 +61,37 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                 </div>
             </div >
         </>
+    )
+}
+
+const RenderImages = ({ imagesArray }) => {
+    return (
+        <Row>
+            {
+                imagesArray.map(item => (
+                    <Col
+                        className='services__row__col'
+                        key={item.img}
+                        xs={23} sm={11} md={7} lg={7}
+                    >
+                        < Card
+                            cover={
+                                < img
+                                    src={item.img}
+                                    alt={item.title}
+                                    title={item.title}
+                                />
+                            }
+                        >
+                            <Card.Meta
+                                title={item.title}
+                                description={item.description}
+                            />
+                        </Card>
+                    </Col>
+                ))
+            }
+        </Row>
     )
 }
 
