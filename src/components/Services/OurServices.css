@@ -6,7 +6,6 @@
     position: relative;
     min-height: calc(100vh - 50px);
     width: 100%;
-    background: #e6e6e6;
     padding-top: 20px;
 }
 
@@ -15,7 +14,7 @@
     top: 0;
     width: 100%;
     height: 160px;
-    background-color: #a2a2a2;
+    background-color: #272727;
     box-shadow: 0 2px 6px rgba(0, 0, 0, .8)
         /* z-index: 10; */
 }
@@ -102,11 +101,28 @@
     letter-spacing: 2px !important;
 }
 
-.services__content:last-child {
-    background-image: url('../../assets/img/jpg/drinks-night.jpg');
-    background-position: center center;
-    background-attachment: scroll;
+.services__description {
+    padding: 20px 40px;
+    font-family: Quicksand;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+}
 
+.services__content:last-child .services__description {
+    color: #fff;
+}
+
+.services__content {
+    background: #e6e6e6 !important;
+}
+
+.services__content:last-child {
+    /* background-image: url('../../assets/img/jpg/drinks-night.jpg');
+    background-position: center center;
+    background-attachment: scroll; */
+    background: none !important;
 }
 
 .services__content:last-child h3 {
@@ -127,12 +143,13 @@
 .services__content:last-child::after {
     position: absolute;
     content: '';
-    bottom: -60px;
+    bottom: -40px;
     width: 100%;
     height: 84px;
     background: #e6e6e6;
     border-radius: 0 0 24px 24px;
     box-shadow: 0 2px 10px #e6e6e6;
+    z-index: 1;
 }
 
 .services__row__col {
@@ -212,9 +229,34 @@
         width: 60%;
     }
 
+    .services__line {
+        height: 135px;
+    }
+
+    .services__title h3 {
+        font-size: 44.2px;
+    }
+
+    .services__content-subtitle h3 {
+        font-size: 52.2px;
+    }
+
+    .services__description {
+        font-size: 16px;
+    }
+
+    .services__row__col {
+        padding: 2px;
+    }
+
+    .services__content-row {
+        height: 850px;
+        overflow: hidden;
+    }
+
     .ant-card-meta-description,
     .ant-card-meta-title {
-        width: 200px;
+        width: 240px;
     }
 }
 
@@ -222,24 +264,9 @@
     .services__content:last-child {
         background-position: 0;
     }
-}
 
-@media (max-width: 830px) {
-    .services__title {
-        width: 97.2%;
-    }
-}
-
-@media (max-width: 767px) {
-    .services__content-row {
-        height: 600px;
-        overflow: hidden;
-    }
-}
-
-@media (max-width: 575px) {
     .services__line {
-        height: 100px;
+        height: 115px;
     }
 
     .services__title h3 {
@@ -264,3 +291,18 @@
         width: 240px;
     }
 }
+
+@media (max-width: 830px) {
+    .services__title {
+        width: 97.2%;
+    }
+}
+
+@media (max-width: 767px) {
+    .services__content-row {
+        height: 600px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 675px) {}

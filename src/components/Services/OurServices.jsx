@@ -22,6 +22,10 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                     <div className='services__content-subtitle'>
                         <h3>¡La mejor comida!</h3>
                     </div>
+                    <div className='services__description'>
+                        <p>Acá puede haber una descripción general de la comida. Cómo la sirven, si está calentita :p, etc..</p>
+                        <p><em>Ofrecemos tales cosas y tales otras</em></p>
+                    </div>
                     <div className='services__content-row'>
                         <Row>
                             <Col xs={0} sm={0} md={0} />
@@ -39,11 +43,15 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                 </div>
                 <br /><br />
                 <div className='services__content'>
-                    <div className={`services__title ${scrollRotateSecond}`}>
+                    {/* <div className={`services__title ${scrollRotateSecond}`}>
                         <h3>Y por supuesto...</h3>
-                    </div>
+                    </div> */}
                     <div className='services__content-subtitle'>
-                        <h3>¡Los mejores tragos!</h3>
+                        <h3>¡Y los mejores tragos!</h3>
+                    </div>
+                    <div className='services__description'>
+                        <p>Acá una descripción general de la bebida. O algo que quieras comentar</p>
+                        <p><em>Ofrecemos tales cosas y tales otras</em></p>
                     </div>
                     <div className='services__content-row'>
                         <Row>

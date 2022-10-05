@@ -10,7 +10,8 @@
     height: 178px;
     padding-top: 54px;
     padding-bottom: 4px;
-    background: #e6e6e6;
+    background: #272727;
+    box-shadow: 0 4px 8px #000;
 }
 
 
@@ -71,11 +72,11 @@
 .header-home__title div p span {
     display: flex;
     align-items: center;
-    font-family: 'Satisfy';
+    font-family: QuicksandBold;
     letter-spacing: 2px;
     font-size: 34px;
     font-weight: 900;
-    color: #373737;
+    color: #e6e6e6;
 }
 
 .header-home__title div p span img {

@@ -11,13 +11,14 @@ import './Gallery.css'
 const Gallery = ({ scrollRotateThird }) => {
     return (
         <div className='gallery'>
+            <div className='gallery__line' />
             <div className={`services__title ${scrollRotateThird}`}>
                 <h3>Galería</h3>
             </div>
             <div className='gallery__content'>
                 <Row>
-                    <Col xs={0} sm={1} md={2} lg={2} />
-                    <Col xs={24} sm={22} md={20} lg={20}>
+                    <Col xs={0} sm={1} md={1} lg={1} />
+                    <Col xs={24} sm={22} md={22} lg={22}>
                         <div className='row'>
                             <div className='column'>
                                 {
@@ -47,9 +48,16 @@ const Gallery = ({ scrollRotateThird }) => {
                                     )
                                 }
                             </div>
+                            <div className='column'>
+                                {
+                                    imgGallery5E.map(item =>
+                                        <Image width='200' src={item.img} />
+                                    )
+                                }
+                            </div>
                         </div>
                     </Col>
-                    <Col xs={0} sm={1} md={2} lg={2} />
+                    <Col xs={0} sm={1} md={1} lg={1} />
                 </Row>
             </div>
         </div>

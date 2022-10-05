@@ -3,11 +3,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 178px;
+    margin-top: 128px;
     width: 100%;
-    height: calc(100vh - 178px);
-    background-color: #000;
+    height: calc(100vh - 128px);
+    /* background-color: #000; */
     overflow: hidden;
+    z-index: -1;
 }
 
 .banner .text {
@@ -104,5 +105,11 @@
         padding-top: 8px;
         padding-left: 0px;
         padding-right: 0px;
+    }
+}
+
+@media (max-width: 343px) {
+    .banner .text {
+        font-size: 30px;
     }
 }

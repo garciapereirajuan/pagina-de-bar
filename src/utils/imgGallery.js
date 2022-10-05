@@ -137,7 +137,7 @@ export const imgGallery5D = [
     }
 ]
 
-export const imgGallery5F = [
+export const imgGallery5E = [
     {
         img: gallery6,
         title: 'Titulo del imagen',

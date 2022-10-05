@@ -7,6 +7,7 @@ import HeaderHome from './components/HeaderHome'
 import MenuTop from './components/MenuTop'
 import Banner from './components/Banner'
 import OurServices from './components/Services'
+import Location from './components/Location'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 
@@ -78,8 +79,10 @@ function App() {
       <div className={`menu-top ${scrollStaticMenu}`}>
         <MenuTop />
       </div>
+      <div className='banner__background' />
       <Banner />
       <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
+      <Location scrollRotateThird={scrollRotateThird} />
       <Gallery scrollRotateThird={scrollRotateThird} />
       <Footer />
     </div >

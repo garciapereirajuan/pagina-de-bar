@@ -6,13 +6,15 @@
     top: 0;
     padding: 4px 0;
     transition: all ease .2s;
+    background: #e6e6e6;
 }
 
 .menu-top.scroll-static-menu {
     position: fixed;
     top: 0px;
     z-index: 5;
-    background-color: #373737;
+    background-color: rgba(255, 255, 255, .9);
+    color: #373737;
 }
 
 .menu-top div:first-child,

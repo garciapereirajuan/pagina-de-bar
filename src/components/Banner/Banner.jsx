@@ -10,7 +10,7 @@ const Banner = () => {
                 <p>Tenemos<br /> los mejores traguitos<br /> y la comida más rica</p>
                 <p>OPEN DOOR<br /><span>19:30hs</span></p>
             </div>
-            <img src={imgBanner} alt='Bebidas alcoholicas' />
+            {/* <img src={imgBanner} alt='Bebidas alcoholicas' /> */}
         </div>
     )
 }
