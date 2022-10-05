@@ -14,6 +14,7 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
             <Helmet>
             </Helmet>
             <div className='services'>
+                <div className='services__line' />
                 <div className='services__content'>
                     <div className={`services__title ${scrollRotateFirst}`}>
                         <h3>Te ofrecemos...</h3>

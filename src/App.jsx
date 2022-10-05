@@ -7,6 +7,7 @@ import HeaderHome from './components/HeaderHome'
 import MenuTop from './components/MenuTop'
 import Banner from './components/Banner'
 import OurServices from './components/Services'
+import Gallery from './components/Gallery'
 import Footer from './components/Footer'
 
 import './App.css';
@@ -15,6 +16,7 @@ function App() {
   const [scrollStaticMenu, setScrollStaticMenu] = useState('')
   const [scrollRotateFirst, setScrollRotateFirst] = useState('')
   const [scrollRotateSecond, setScrollRotateSecond] = useState('')
+  const [scrollRotateThird, setScrollRotateThird] = useState('')
   const [title, setTitle] = useState(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>)
   // const [finishAnimationTitle, setFinishAnimationTitle] = useState(false)
 
@@ -35,12 +37,18 @@ function App() {
     if (y >= 1300) {
       setScrollRotateSecond('scroll-rotate-second')
     }
+    if (y >= 2500) {
+      setScrollRotateThird('scroll-rotate-third')
+    }
     if (y < 180) {
       setScrollStaticMenu('')
       setScrollRotateFirst('')
     }
     if (y < 1300) {
       setScrollRotateSecond('')
+    }
+    if (y < 2500) {
+      setScrollRotateThird('')
     }
   };
 
@@ -71,10 +79,9 @@ function App() {
         <MenuTop />
       </div>
       <Banner />
-      <div className='services__background' />
       <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
+      <Gallery scrollRotateThird={scrollRotateThird} />
       <Footer />
-
     </div >
 
   );

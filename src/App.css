@@ -1,10 +1,20 @@
+@import 'antd/es/style/default.css';
+
 .App {
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
+/* p {
+  padding: 0 !important;
+  padding-left: 4px !important;
+  padding-right: 4px !important;
+  margin: 0 !important;
+} */
+
 * {
-  box-sizing: border-box;
+  line-height: normal !important;
+  box-sizing: border-box !important;
 }
 
 .menu-top div,
