@@ -24,7 +24,6 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                     </div>
                     <div className='services__description'>
                         <p>Acá puede haber una descripción general de la comida. Cómo la sirven, si está calentita :p, etc..</p>
-                        <p><em>Ofrecemos tales cosas y tales otras</em></p>
                     </div>
                     <div className='services__content-row'>
                         <Row>
@@ -51,7 +50,6 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                     </div>
                     <div className='services__description'>
                         <p>Acá una descripción general de la bebida. O algo que quieras comentar</p>
-                        <p><em>Ofrecemos tales cosas y tales otras</em></p>
                     </div>
                     <div className='services__content-row'>
                         <Row>

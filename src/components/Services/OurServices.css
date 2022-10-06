@@ -7,6 +7,7 @@
     min-height: calc(100vh - 50px);
     width: 100%;
     padding-top: 20px;
+    background: rgba(88, 88, 88, .8)
 }
 
 .services__line {
@@ -115,14 +116,16 @@
 }
 
 .services__content {
-    background: #e6e6e6 !important;
+    background: #e6e6e6;
+    background-size: cover;
 }
 
 .services__content:last-child {
     /* background-image: url('../../assets/img/jpg/drinks-night.jpg');
     background-position: center center;
     background-attachment: scroll; */
-    background: none !important;
+    background-image: url('../../assets/img/jpg/drink-lights.jpg');
+    background-size: cover;
 }
 
 .services__content:last-child h3 {
@@ -137,7 +140,7 @@
     height: 84px;
     background: #e6e6e6;
     border-radius: 0 0 24px 24px;
-    box-shadow: 0 2px 10px #e6e6e6;
+    box-shadow: 0 10px 20px #000;
 }
 
 .services__content:last-child::after {
@@ -153,7 +156,7 @@
 }
 
 .services__row__col {
-    padding: 12px;
+    padding: 6px;
 }
 
 .services__content-sheet {
@@ -199,7 +202,7 @@
 }
 
 .ant-card {
-    border-radius: 24px !important;
+    border-radius: 8px !important;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .4);
 }
 
@@ -209,7 +212,7 @@
     background-color: #373737;
     overflow: hidden !important;
     height: 240px;
-    border-radius: 24px 24px 0 0;
+    border-radius: 8px 8px 0 0;
 }
 
 .ant-card-meta {
@@ -294,7 +297,7 @@
 
 @media (max-width: 830px) {
     .services__title {
-        width: 97.2%;
+        width: 69.2%;
     }
 }
 
@@ -305,4 +308,8 @@
     }
 }
 
-@media (max-width: 675px) {}
+@media (max-width: 500px) {
+    .services__title {
+        width: 98%;
+    }
+}

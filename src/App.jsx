@@ -18,6 +18,7 @@ function App() {
   const [scrollRotateFirst, setScrollRotateFirst] = useState('')
   const [scrollRotateSecond, setScrollRotateSecond] = useState('')
   const [scrollRotateThird, setScrollRotateThird] = useState('')
+  const [scrollRotateFourth, setScrollRotateFourth] = useState('')
   const [title, setTitle] = useState(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>)
   // const [finishAnimationTitle, setFinishAnimationTitle] = useState(false)
 
@@ -38,8 +39,11 @@ function App() {
     if (y >= 1300) {
       setScrollRotateSecond('scroll-rotate-second')
     }
-    if (y >= 2500) {
+    if (y >= 2400) {
       setScrollRotateThird('scroll-rotate-third')
+    }
+    if (y >= 3800) {
+      setScrollRotateFourth('scroll-rotate-fourth')
     }
     if (y < 180) {
       setScrollStaticMenu('')
@@ -48,8 +52,11 @@ function App() {
     if (y < 1300) {
       setScrollRotateSecond('')
     }
-    if (y < 2500) {
+    if (y < 2400) {
       setScrollRotateThird('')
+    }
+    if (y < 3800) {
+      setScrollRotateFourth('')
     }
   };
 
@@ -82,8 +89,8 @@ function App() {
       <div className='banner__background' />
       <Banner />
       <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
-      <Location scrollRotateThird={scrollRotateThird} />
-      <Gallery scrollRotateThird={scrollRotateThird} />
+      <Gallery scrollRotateThird={scrollRotateThird} scrollRotateFourth={scrollRotateFourth} />
+      <Location scrollRotateFourth={scrollRotateFourth} />
       <Footer />
     </div >
 

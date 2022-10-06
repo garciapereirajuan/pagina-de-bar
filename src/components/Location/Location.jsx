@@ -5,40 +5,34 @@ import imgSocial from '../../assets/img/jpg/social-3.jpg'
 
 import './Location.css'
 
-const Location = ({ scrollRotateThird }) => {
+const Location = ({ scrollRotateFourth }) => {
     return (
         <div className='location'>
-            <div className='location__line' />
-            <div className={`location__title ${scrollRotateThird}`}>
+            <div className='services__line' />
+            <div className={`services__title ${scrollRotateFourth}`}>
                 <h3>Estamos en...</h3>
             </div>
             <div className='location__content'>
                 <Row>
-                    <Col xs={0} sm={1} md={2} lg={2} />
-                    <Col xs={24} sm={7} md={6} lg={6}>
-                        <img src={imgSocial} width={300} />
+                    <Col xs={0} sm={0} md={2} lg={2} />
+                    <Col xs={24} sm={8} md={6} lg={6} className='location__content-img'>
+                        <img src={imgSocial} width='90%' />
                     </Col>
                     <Col xs={0} sm={0} md={1} lg={1} />
-                    <Col xs={24} sm={22} md={6} lg={6} className='location__content-col'>
-
-
+                    <Col xs={24} sm={8} md={6} lg={6} className='location__content-col'>
                         <div className='location__content-title'>
                             <p>{<HiLocationMarker />} Guamini (Buenos Aires, Argentina)</p>
                             <p>{<BsClockFill />} Abrimos 19:30 hs</p>
                             <p>{<BsFillCalendarDayFill />} Viernes, sábados, domingos y feriados</p>
                         </div>
-                        <div className='location__content-map'>
-                            <p>Entre Baraldi y San Martín</p>
-
-                        </div>
                     </Col>
                     <Col xs={0} sm={0} md={1} lg={1} />
-                    <Col xs={24} sm={22} md={6} lg={6} className='location__content-col'>
+                    <Col xs={24} sm={8} md={6} lg={6} className='location__content-col'>
                         <div className='location__content-description'>
                             <div className='location__content-title'>
-                                {/* <p>Social</p> */}
+                                <p>Sobre nosotros</p>
                             </div>
-                            <p>Con más de 14 años de experiencia en el sector, una descripción de ustedes tus palabras...</p> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi necessitatibus rem consequuntur atque ratione id unde quod deserunt fugit possimus pariatur, molestias voluptatum veritatis officiis nisi nemo animi ea vitae?</p>
+                            <p>Algo que quieras agregar, el tiempo que están en el sector, etc..</p> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi necessitatibus rem consequuntur atque ratione id unde quod deserunt fugit possimus pariatur, molestias voluptatum veritatis officiis nisi nemo animi ea vitae?</p>
                         </div>
                     </Col>
 
