@@ -101,20 +101,20 @@ function App() {
   return (
     <div className="App">
       <HeaderHome changeTitle={changeTitle} title={title} />
-      <div className={`menu-slider ${scrollStaticMenu}`}>
-        <div onClick={toggleMenu}>
-          <FiMenu />
-        </div>
+      <div className={`menu-slider ${scrollStaticMenu}`} onClick={toggleMenu}>
+        <FiMenu />
       </div>
       <div className={`menu-top ${scrollStaticMenu}`}>
         <MenuTop />
       </div>
       <div className='banner__background' />
       <Banner />
-      <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
-      <div ref={elementGallery}>{show ? <Gallery /> : null}</div>
-      {/* <Gallery scrollRotateThird={scrollRotateThird} scrollRotateFourth={scrollRotateFourth} /> */}
-      <Location scrollRotateFourth={scrollRotateFourth} />
+      <main>
+        <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
+        <div ref={elementGallery}>{show ? <Gallery /> : null}</div>
+        {/* <Gallery scrollRotateThird={scrollRotateThird} scrollRotateFourth={scrollRotateFourth} /> */}
+        <Location scrollRotateFourth={scrollRotateFourth} />
+      </main>
       <Footer />
     </div >
 

@@ -7,7 +7,7 @@
     min-height: calc(100vh - 50px);
     width: 100%;
     padding-top: 20px;
-    background: rgba(88, 88, 88, .8)
+    /* background: rgba(88, 88, 88, .8) */
 }
 
 .services__line {
@@ -124,8 +124,9 @@
     /* background-image: url('../../assets/img/jpg/drinks-night.jpg');
     background-position: center center;
     background-attachment: scroll; */
-    background-image: url('../../assets/img/jpg/drink-lights.jpg');
-    background-size: cover;
+    /* background-image: url('../../assets/img/jpg/drink-lights.jpg');
+    background-size: cover; */
+    background: #373737;
 }
 
 .services__content:last-child h3 {

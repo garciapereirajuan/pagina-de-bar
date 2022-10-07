@@ -17,7 +17,7 @@
   box-sizing: border-box !important;
 }
 
-.banner__background {
+/* .banner__background {
   position: fixed;
   top: 0;
   width: 100vw;
@@ -25,7 +25,7 @@
   background-image: url('./assets/img/jpg/drinks-night.jpg');
   background-size: cover;
   z-index: -1;
-}
+} */
 
 .menu-top div,
 .menu-slider div {

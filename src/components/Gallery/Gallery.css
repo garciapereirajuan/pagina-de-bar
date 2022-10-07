@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    /* background: #e6e6e6; */
-    background-image: url('../../assets/img/jpg/lights.png');
+    background: #e6e6e6;
+    background-image: url('../../assets/img/jpg/lights-wp-2.jpg');
     background-size: cover;
 }
 
@@ -91,9 +91,9 @@ img {
 
 @media (max-width: 900px) {
     .gallery {
-        background-image: url('../../assets/img/jpg/lights-left.png');
+        background-image: url('../../assets/img/jpg/lights-wp-2.jpg');
         background-position: center center;
-        background-size: contain;
+        /* background-size: contain; */
     }
 
     .column {

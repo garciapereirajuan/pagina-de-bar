@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { imgGallery5A, imgGallery5B, imgGallery5C, imgGallery5D, imgGallery5E } from '../../utils/imgGallery'
 import { Row, Col, Image } from 'antd'
+import emojiHeart from '../../assets/img/png/emoji-heart.png'
 
 import 'antd/es/image/style/index.css'
 
@@ -21,7 +22,11 @@ const Gallery = ({ scrollRotateThird, scrollRotateFourth }) => {
                 <h3>¡Algunas fotos!</h3>
             </div>
             <div className='services__description'>
-                <p>de nuestro bar...</p>
+                <p>
+                    {' '}de nuestro bar...{' '}
+                    <img style={{ boxShadow: 'none' }} src={emojiHeart} width={30} />{' '}
+                    <img style={{ boxShadow: 'none' }} src={emojiHeart} width={30} />
+                </p>
             </div>
             <div className='gallery__content'>
                 <Row>

@@ -64,12 +64,12 @@
     transition: all ease .2s;
 }
 
-.header-home__title p {
+.header-home__title h2 {
     padding: 0 !important;
     margin: 0 !important;
 }
 
-.header-home__title div p span {
+.header-home__title h2 span {
     display: flex;
     align-items: center;
     font-family: QuicksandBold;
@@ -79,7 +79,7 @@
     color: #e6e6e6;
 }
 
-.header-home__title div p span img {
+.header-home__title h2 span img {
     margin-left: 4px;
 }
 

@@ -8,20 +8,15 @@ import './HeaderHome.css'
 const HeaderHome = ({ changeTitle, title }) => {
     return (
         <header className='header-home'>
-            <div
-                className='header-home__logo'
-            >
-                <div onClick={() => changeTitle(emojiGafas)}>
-                    <img src={socialLogo} alt='Social-Logo' width='100px' />
-                </div>
+
+            <div className='header-home__logo' onClick={() => changeTitle(emojiGafas)}>
+                <img src={socialLogo} alt='Social Guaminí, Buenos Aires, Argentina' width='100px' />
             </div>
             <div
                 className={`header-home__title`}
                 onClick={() => changeTitle(emojiGuiño)}
             >
-                <div>
-                    <p>{title}</p>
-                </div>
+                <h2>{title}</h2>
             </div>
         </header>
     )
