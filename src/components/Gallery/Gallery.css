@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     padding-top: 20px;
     background: #e6e6e6;
     background-image: url('../../assets/img/jpg/lights-wp-2.jpg');
@@ -77,11 +78,11 @@ img {
     justify-content: flex-start;
     transition: all ease .2s;
     flex: 10%;
-    padding: 2px;
+    padding: 12px;
 }
 
 .column .ant-image {
-    margin-top: 5px;
+    margin-top: 20px;
     border-radius: 6px !important;
 }
 
@@ -90,14 +91,19 @@ img {
 }
 
 @media (max-width: 900px) {
+
     .gallery {
         background-image: url('../../assets/img/jpg/lights-wp-2.jpg');
         background-position: center center;
         /* background-size: contain; */
     }
 
+    .column .ant-image {
+        margin-top: 10px;
+    }
+
     .column {
-        /* flex: 22%; */
+        padding: 6px;
     }
 }
 
@@ -118,5 +124,16 @@ img {
 @media (max-width: 500px) {
     .column {
         flex: 100%;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .column .ant-image {
+        margin-top: 20px;
+    }
+
+    .column {
+        padding: 6px;
     }
 }

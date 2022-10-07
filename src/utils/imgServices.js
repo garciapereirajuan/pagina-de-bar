@@ -13,11 +13,6 @@ import drink6 from '../assets/img/jpg/drink-3.jpg'
 
 export const imgFood = [
     {
-        img: food6,
-        title: 'Una pinta los sanguchitos',
-        description: 'Una descripción o precio...'
-    },
-    {
         img: food4,
         title: 'Papas rústicas',
         description: '$400'
@@ -27,10 +22,14 @@ export const imgFood = [
         title: 'Jamón y rúcula',
         description: '$400'
     },
-
     {
         img: food3,
         title: 'Las mejores ensaladas',
+        description: 'Una descripción o precio...'
+    },
+    {
+        img: food6,
+        title: 'Una pinta los sanguchitos',
         description: 'Una descripción o precio...'
     },
     {

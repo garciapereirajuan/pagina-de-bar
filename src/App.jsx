@@ -89,7 +89,7 @@ function App() {
     }
 
     const observer = new IntersectionObserver(onChange, {
-      rootMargin: '400px'
+      rootMargin: '680px'
     })
 
     observer.observe(elementGallery.current)
@@ -101,8 +101,10 @@ function App() {
   return (
     <div className="App">
       <HeaderHome changeTitle={changeTitle} title={title} />
-      <div className={`menu-slider ${scrollStaticMenu}`} onClick={toggleMenu}>
-        <FiMenu />
+      <div className={`menu-slider ${scrollStaticMenu}`}>
+        <div onClick={toggleMenu}>
+          <FiMenu />
+        </div>
       </div>
       <div className={`menu-top ${scrollStaticMenu}`}>
         <MenuTop />

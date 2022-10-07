@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { imgGallery5A, imgGallery5B, imgGallery5C, imgGallery5D, imgGallery5E } from '../../utils/imgGallery'
-import { Row, Col, Image } from 'antd'
+import { Row, Col, Image, Spin } from 'antd'
 import emojiHeart from '../../assets/img/png/emoji-heart.png'
 
 import 'antd/es/image/style/index.css'
@@ -30,47 +30,47 @@ const Gallery = ({ scrollRotateThird, scrollRotateFourth }) => {
             </div>
             <div className='gallery__content'>
                 <Row>
-                    <Col xs={0} sm={1} md={1} lg={1} />
-                    <Col xs={24} sm={22} md={22} lg={22}>
+                    <Col xs={1} sm={1} md={1} lg={1} />
+                    <Col xs={22} sm={22} md={22} lg={22}>
                         <div className='row'>
                             <div className={`column ${scrollRotateFourth}`}>
                                 {
                                     imgGallery5A.map(item =>
-                                        <Image src={item.img} />
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
                                     )
                                 }
                             </div>
                             <div className={`column ${scrollRotateFourth}`}>
                                 {
                                     imgGallery5B.map(item =>
-                                        <Image src={item.img} />
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
                                     )
                                 }
                             </div>
                             <div className={`column ${scrollRotateFourth}`}>
                                 {
                                     imgGallery5C.map(item =>
-                                        <Image src={item.img} />
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
                                     )
                                 }
                             </div>
                             <div className={`column ${scrollRotateFourth}`}>
                                 {
                                     imgGallery5D.map(item =>
-                                        <Image src={item.img} />
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
                                     )
                                 }
                             </div>
                             <div className={`column ${scrollRotateFourth}`}>
                                 {
                                     imgGallery5E.map(item =>
-                                        <Image src={item.img} />
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
                                     )
                                 }
                             </div>
                         </div>
                     </Col>
-                    <Col xs={0} sm={1} md={1} lg={1} />
+                    <Col xs={1} sm={1} md={1} lg={1} />
                 </Row>
             </div>
         </div>

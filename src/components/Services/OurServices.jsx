@@ -27,11 +27,11 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                     </div>
                     <div className='services__content-row'>
                         <Row>
-                            <Col xs={0} sm={0} md={0} />
-                            <Col xs={24} sm={24} md={24} >
+                            <Col xs={1} sm={1} md={1} />
+                            <Col xs={22} sm={22} md={22} >
                                 <RenderImages imagesArray={imgFood} />
                             </Col>
-                            <Col xs={0} sm={12} md={0} />
+                            <Col xs={1} sm={1} md={1} />
                         </Row>
                     </div>
                     <div className='services__content-sheet'>
@@ -53,11 +53,11 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                     </div>
                     <div className='services__content-row'>
                         <Row>
-                            <Col xs={0} sm={0} md={0} />
-                            <Col xs={24} sm={24} md={24} >
+                            <Col xs={1} sm={1} md={1} />
+                            <Col xs={22} sm={22} md={22} >
                                 <RenderImages imagesArray={imgDrink} />
                             </Col>
-                            <Col xs={0} sm={0} md={1} />
+                            <Col xs={1} sm={1} md={1} />
                         </Row>
                     </div>
                     <div className='services__content-sheet'>

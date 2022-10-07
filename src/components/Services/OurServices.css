@@ -152,12 +152,12 @@
     height: 84px;
     background: #e6e6e6;
     border-radius: 0 0 24px 24px;
-    box-shadow: 0 2px 10px #e6e6e6;
+    box-shadow: 0 2px 10px #000;
     z-index: 1;
 }
 
 .services__row__col {
-    padding: 6px;
+    padding: 10px;
 }
 
 .services__content-sheet {
@@ -250,7 +250,7 @@
     }
 
     .services__row__col {
-        padding: 2px;
+        padding: 10px;
     }
 
     .services__content-row {
@@ -282,7 +282,7 @@
     }
 
     .services__row__col {
-        padding: 2px;
+        padding: 10px;
     }
 
     .services__content-row {
