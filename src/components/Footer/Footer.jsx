@@ -10,11 +10,11 @@ const Footer = () => {
     return (
         <footer className='footer'>
             <Row>
-                <Col lg={6}>
+                <Col sm={24} lg={6} style={{ textAlign: 'center' }}>
                     <h4>Club Social | Guaminí, Buenos Aires, Argentina</h4>
                     <img src={socialLogo} alt='Social Guaminí, Buenos Aires, Argentina' width='100px' />
                 </Col>
-                <Col lg={6} className='col-top'>
+                <Col xs={12} sm={8} lg={6} className='col-top'>
                     <h4>Links</h4>
                     <nav>
                         <Link to='home' spy={true} smooth={true} duration={500}>
@@ -31,7 +31,7 @@ const Footer = () => {
                         </Link>
                     </nav>
                 </Col>
-                <Col lg={6} className='col-top'>
+                <Col xs={12} sm={8} lg={6} className='col-top'>
                     <h4>Contacto</h4>
                     <nav>
                         <a
@@ -50,7 +50,7 @@ const Footer = () => {
                         </a>
                     </nav>
                 </Col>
-                <Col lg={6} className='col-top'>
+                <Col xs={24} sm={8} lg={6} className='col-top'>
                     <h4>Lugar y Horarios</h4>
                     <div>
                         <p>Viernes, sábados, domingos y feriados.</p>

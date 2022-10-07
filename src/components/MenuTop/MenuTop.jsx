@@ -5,7 +5,7 @@ import { AiFillInstagram } from 'react-icons/ai'
 
 import './MenuTop.css'
 
-const MenuTop = () => {
+const MenuTop = ({ scrollSmooth }) => {
     return (
         <>
             <Link to='home' spy={true} smooth={true} duration={500}>
@@ -14,10 +14,10 @@ const MenuTop = () => {
             <Link to="services" spy={true} smooth={true} duration={500}>
                 Te ofrecemos...
             </Link>
-            <Link to="gallery" spy={true} smooth={true} duration={500}>
+            <Link to="gallery" spy={true} smooth={true} duration={scrollSmooth ? 500 : 0}>
                 Galería
             </Link>
-            <Link to="location" spy={true} smooth={true} duration={0}>
+            <Link to="location" spy={true} smooth={true} duration={scrollSmooth ? 500 : 0}>
                 Estamos en...
             </Link>
             <a className='social-icon' target='_blank' rel='noreferrer' href='https://instagram.com/social.guamini/'>

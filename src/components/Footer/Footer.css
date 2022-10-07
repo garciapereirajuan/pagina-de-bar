@@ -7,7 +7,7 @@
     padding-right: 20px;
     height: max-content;
     background: #272727;
-    font-family: QuicksandBold;
+    font-family: QuicksandBold, 'Segoe Print', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #e6e6e6;
     border-radius: 4px;
 }
@@ -91,4 +91,18 @@
 
 .footer .me a:hover {
     color: rgba(87, 87, 87, 1)
+}
+
+@media (max-width: 991px) {
+    .footer .ant-col {
+        padding: 0px;
+    }
+
+    .footer .ant-col:first-child {
+        padding-top: 8px;
+    }
+
+    .footer .ant-col:last-child {
+        padding-bottom: 8px;
+    }
 }

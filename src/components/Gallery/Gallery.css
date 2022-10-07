@@ -13,6 +13,7 @@
     background: #e6e6e6;
     background-image: url('../../assets/img/jpg/lights-wp-2.jpg');
     background-size: cover;
+    background-blend-mode: multiply;
 }
 
 /* .gallery__line {
@@ -86,7 +87,7 @@ img {
 }
 
 .column .ant-image {
-    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 6px !important;
 }
 

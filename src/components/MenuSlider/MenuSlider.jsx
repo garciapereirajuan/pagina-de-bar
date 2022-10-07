@@ -59,7 +59,7 @@ const Menu = () => {
                 to="gallery"
                 spy={true}
                 smooth={true}
-                duration={500}
+                duration={0}
                 onClick={() => closeMenu()}
             >
                 <GrGallery /> Galería
@@ -68,7 +68,7 @@ const Menu = () => {
                 to="location"
                 spy={true}
                 smooth={false}
-                duration={10}
+                duration={0}
                 onClick={() => closeMenu()}
             >
                 <BiMapPin /> Estamos en...

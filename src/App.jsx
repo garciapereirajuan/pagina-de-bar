@@ -1,5 +1,4 @@
 import { useEffect, useState, useRef, useContext } from 'react'
-import { FaCopyright } from 'react-icons/fa'
 import { FiMenu } from 'react-icons/fi'
 import { MenuContext } from 'react-flexible-sliding-menu'
 import emojiGuiño from './assets/img/png/emoji-guiño.png'
@@ -10,7 +9,6 @@ import OurServices from './components/Services'
 import Location from './components/Location'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
-import { Modal } from './components/Modal'
 
 import './App.css';
 
@@ -18,9 +16,9 @@ function App() {
   const [scrollStaticMenu, setScrollStaticMenu] = useState('')
   const [scrollRotateFirst, setScrollRotateFirst] = useState('')
   const [scrollRotateSecond, setScrollRotateSecond] = useState('')
-  const [scrollRotateThird, setScrollRotateThird] = useState('')
   const [scrollRotateFourth, setScrollRotateFourth] = useState('')
   const [initialPosition, setInitialPosition] = useState(true)
+  const [scrollSmooth, setScrollSmooth] = useState(false)
   const [title, setTitle] = useState(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>)
   // const [finishAnimationTitle, setFinishAnimationTitle] = useState(false)
 
@@ -34,7 +32,6 @@ function App() {
 
   window.onscroll = function () {
     var y = window.scrollY;
-    console.log(y)
     if (y === 0) {
       setInitialPosition(true);
     }
@@ -48,9 +45,6 @@ function App() {
     if (y >= 1300) {
       setScrollRotateSecond('scroll-rotate-second')
     }
-    if (y >= 2400) {
-      setScrollRotateThird('scroll-rotate-third')
-    }
     if (y >= 3800) {
       setScrollRotateFourth('scroll-rotate-fourth')
     }
@@ -60,9 +54,6 @@ function App() {
     }
     if (y < 1300) {
       setScrollRotateSecond('')
-    }
-    if (y < 2400) {
-      setScrollRotateThird('')
     }
     if (y < 3800) {
       setScrollRotateFourth('')
@@ -83,50 +74,29 @@ function App() {
     setTitle(<span>Tu bar amigo  <img src={emoji} width={46} alt='Emoji gafas' /></span>)
   }
 
-  const [show, setShow] = useState(false)
-  const elementGallery = useRef()
-
-
-  useEffect(() => {
-    const onChange = (entries, observer) => {
-      const elem = entries[0]
-      console.log(elem)
-      if (elem.isIntersecting) {
-        setShow(true)
-        observer.disconnect()
-      }
-    }
-
-    const observer = new IntersectionObserver(onChange, {
-      rootMargin: '680px'
-    })
-
-    observer.observe(elementGallery.current)
-
-    return () => observer.disconnect()
-  }, [])
-
 
   return (
-    <div className="App">
-      <HeaderHome changeTitle={changeTitle} title={title} />
-      <div className={`menu-slider ${scrollStaticMenu}`}>
-        <div onClick={toggleMenu}>
-          <FiMenu />
+    <>
+      <div className="App">
+        <HeaderHome changeTitle={changeTitle} title={title} />
+        <div className={`menu-slider ${scrollStaticMenu}`}>
+          <div onClick={toggleMenu}>
+            <FiMenu />
+          </div>
         </div>
+        <div className={`menu-top ${scrollStaticMenu}`}>
+          <MenuTop scrollSmooth={scrollSmooth} />
+        </div>
+        <div className='banner__background' />
+        <Banner />
+        <main>
+          <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
+          <Gallery initialPosition={initialPosition} setScrollSmooth={setScrollSmooth} />
+          <Location initialPosition={initialPosition} scrollRotateFourth={scrollRotateFourth} />
+        </main>
+        <Footer />
       </div>
-      <div className={`menu-top ${scrollStaticMenu}`}>
-        <MenuTop />
-      </div>
-      <div className='banner__background' />
-      <Banner />
-      <main>
-        <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
-        <div ref={elementGallery}><Gallery show={show} initialPosition={initialPosition} /></div>
-        <Location initialPosition={initialPosition} scrollRotateFourth={scrollRotateFourth} />
-      </main>
-      <Footer />
-    </div>
+    </>
   );
 }
 

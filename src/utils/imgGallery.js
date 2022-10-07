@@ -14,23 +14,13 @@ import gallery12 from '../assets/img/jpg/food-3.jpg'
 import gallery13 from '../assets/img/jpg/drink-6.jpg'
 import gallery14 from '../assets/img/jpg/food-1.jpg'
 import gallery15 from '../assets/img/jpg/night.jpg'
-import gallery16 from '../assets/img/jpg/drink-3.jpg'
 import gallery17 from '../assets/img/jpg/drink-1.jpg'
 import gallery18 from '../assets/img/jpg/bar-background.jpg'
 import gallery19 from '../assets/img/jpg/bar-3.jpg'
 import gallery20 from '../assets/img/jpg/dj-1.jpg'
-import gallery21 from '../assets/img/jpg/celebration.jpg'
-import gallery22 from '../assets/img/jpg/concert.jpg'
-import gallery23 from '../assets/img/jpg/boliche.jpg'
-import gallery24 from '../assets/img/jpg/bar.jpg'
-import gallery25 from '../assets/img/jpg/bar-2.jpg'
 
 export const imgGallery5A = [
-    {
-        img: gallery0,
-        title: 'Dj en Matute',
-        description: 'La mejor música en Matute'
-    },
+    
     {
         img: gallery1,
         title: 'Social',
@@ -45,12 +35,11 @@ export const imgGallery5A = [
         img: gallery3,
         title: 'Riquísimo',
         description: 'Descripción de la imagen...'
+    },{
+        img: gallery0,
+        title: 'Dj en Matute',
+        description: 'La mejor música en Matute'
     },
-    {
-        img: gallery4,
-        title: 'El mono',
-        description: 'Descripción de la imagen...',
-    }
 ]
 
 export const imgGallery5B = [
@@ -73,11 +62,6 @@ export const imgGallery5B = [
         img: gallery9,
         title: 'Titulo del imagen',
         description: 'Descripción de la imagen...'
-    },
-    {
-        img: gallery10,
-        title: 'Titulo del imagen',
-        description: 'Descripción de la imagen...'
     }
 ]
 
@@ -88,7 +72,7 @@ export const imgGallery5C = [
         description: 'La mejor música en Matute'
     },
     {
-        img: gallery0,
+        img: gallery12,
         title: 'Social',
         description: 'El Social'
     },
@@ -97,26 +81,12 @@ export const imgGallery5C = [
         title: 'El Social!',
         description: 'Descripción de la imagen...'
     },
-    {
-        img: gallery14,
-        title: 'Riquísimo',
-        description: 'Descripción de la imagen...'
-    },
-    {
-        img: gallery15,
-        title: 'El mono',
-        description: 'Descripción de la imagen...',
-    }
+
 ]
 
 export const imgGallery5D = [
     {
         img: gallery17,
-        title: 'Titulo del imagen',
-        description: 'Descripción de la imagen...'
-    },
-    {
-        img: gallery12,
         title: 'Titulo del imagen',
         description: 'Descripción de la imagen...'
     },
@@ -134,27 +104,17 @@ export const imgGallery5D = [
         img: gallery20,
         title: 'Titulo del imagen',
         description: 'Descripción de la imagen...'
-    }
-]
-
-export const imgGallery5E = [
-    {
-        img: gallery6,
-        title: 'Titulo del imagen',
-        description: 'Descripción de la imagen...'
     },
     {
         img: gallery7,
         title: 'Titulo del imagen',
         description: 'Descripción de la imagen...'
     },
+]
+
+export const imgGallery5E = [
     {
-        img: gallery8,
-        title: 'Titulo del imagen',
-        description: 'Descripción de la imagen...'
-    },
-    {
-        img: gallery9,
+        img: gallery15,
         title: 'Titulo del imagen',
         description: 'Descripción de la imagen...'
     },
@@ -162,5 +122,19 @@ export const imgGallery5E = [
         img: gallery10,
         title: 'Titulo del imagen',
         description: 'Descripción de la imagen...'
-    }
+    },
+    {
+        img: gallery4,
+        title: 'Titulo del imagen',
+        description: 'Descripción de la imagen...'
+    },
+    {
+        img: gallery14,
+        title: 'Riquísimo',
+        description: 'Descripción de la imagen...'
+    },    {
+        img: gallery18,
+        title: 'Titulo del imagen',
+        description: 'Descripción de la imagen...'
+    },
 ]

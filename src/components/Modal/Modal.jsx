@@ -2,7 +2,7 @@ import { Modal as ModalAntd } from 'antd'
 
 import React from 'react'
 
-const Modal = ({ isVisible, setIsVisible, children }) => {
+const Modal = ({ isVisible, setIsVisible, content }) => {
     return (
         <ModalAntd
             centered
@@ -10,7 +10,7 @@ const Modal = ({ isVisible, setIsVisible, children }) => {
             onCancel={() => setIsVisible(false)}
             footer={false}
         >
-            {children}
+            {content}
         </ModalAntd>
     )
 }

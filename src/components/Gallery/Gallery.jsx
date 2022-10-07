@@ -9,8 +9,9 @@ import 'antd/es/style/themes/index.less';
 import 'antd/es/style/mixins/index.less';
 import './Gallery.css'
 
-const Gallery = ({ show, initialPosition }) => {
+const Gallery = ({ initialPosition, setScrollSmooth }) => {
     const [rotate, setRotate] = useState(false)
+    const [loadImages, setLoadImages] = useState(false)
     const elemRef = useRef()
 
     useEffect(() => {
@@ -25,6 +26,8 @@ const Gallery = ({ show, initialPosition }) => {
             const elem = entries[0]
             if (elem.isIntersecting) {
                 setRotate(true)
+                setLoadImages(true)
+                setScrollSmooth(true)
                 observer.disconnect()
                 // console.log()
             }
@@ -46,58 +49,69 @@ const Gallery = ({ show, initialPosition }) => {
             </div>
             <div className='services__description'>
                 <p>
-                    {' '}de nuestro bar...{' '}
-                    <img style={{ boxShadow: 'none' }} src={emojiHeart} width={30} />{' '}
-                    <img style={{ boxShadow: 'none' }} src={emojiHeart} width={30} />
+                    de nuestro bar...{' '}
+                    <img style={{ boxShadow: 'none' }} src={emojiHeart} width={30} alt='Emoji Corazones' />{' '}
+                    <img style={{ boxShadow: 'none' }} src={emojiHeart} width={30} alt='Emoji Corazones' />
                 </p>
             </div>
-            {show && <RenderImages />}
+            {loadImages && <RenderImages />}
         </section>
     )
 }
 
 const RenderImages = () => {
+    const [visible, setVisible] = useState(false)
+
     return (
         <div className='gallery__content'>
             <Row>
                 <Col xs={1} sm={1} md={1} lg={1} />
                 <Col xs={22} sm={22} md={22} lg={22}>
                     <div className='row'>
-                        <div className={`column`}>
-                            {
-                                imgGallery5A.map(item =>
-                                    <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
-                                )
-                            }
-                        </div>
-                        <div className={`column`}>
-                            {
-                                imgGallery5B.map(item =>
-                                    <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
-                                )
-                            }
-                        </div>
-                        <div className={`column`}>
-                            {
-                                imgGallery5C.map(item =>
-                                    <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
-                                )
-                            }
-                        </div>
-                        <div className={`column`}>
-                            {
-                                imgGallery5D.map(item =>
-                                    <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
-                                )
-                            }
-                        </div>
-                        <div className={`column`}>
-                            {
-                                imgGallery5E.map(item =>
-                                    <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
-                                )
-                            }
-                        </div>
+                        <Image.PreviewGroup
+                            preview={{
+                                visible,
+                                onVisibleChange: (vis) => setVisible(vis),
+                            }}
+                        >
+                            <div className={`column`}>
+                                {
+                                    imgGallery5A.map(item =>
+                                        <Image src={item.img}
+                                            placeholder='Cargando...'
+                                        />
+                                    )
+                                }
+                            </div>
+                            <div className={`column`}>
+                                {
+                                    imgGallery5B.map(item =>
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                    )
+                                }
+                            </div>
+                            <div className={`column`}>
+                                {
+                                    imgGallery5C.map(item =>
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                    )
+                                }
+                            </div>
+                            <div className={`column`}>
+                                {
+                                    imgGallery5D.map(item =>
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                    )
+                                }
+                            </div>
+                            <div className={`column`}>
+                                {
+                                    imgGallery5E.map(item =>
+                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                    )
+                                }
+                            </div>
+                        </Image.PreviewGroup>
                     </div>
                 </Col>
                 <Col xs={1} sm={1} md={1} lg={1} />

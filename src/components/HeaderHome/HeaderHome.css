@@ -73,7 +73,7 @@
 .header-home__title h2 span {
     display: flex;
     align-items: center;
-    font-family: QuicksandBold;
+    font-family: QuicksandBold, 'Segoe Print', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: 2px;
     font-size: 34px;
     font-weight: 900;
@@ -88,10 +88,11 @@
 @media (max-width: 900px) {
     .header-home {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        /* flex-direction: column;
+        justify-content: space-between; */
         height: 196px;
-        padding-top: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     .header-home__logo img {
@@ -102,5 +103,39 @@
         top: 0;
         transition: all ease .2s;
     }
+}
 
+@media (max-width: 600px) {
+    .header-home {
+        display: flex;
+        /* flex-direction: column;
+        justify-content: space-between; */
+        height: 136px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header-home__title h2 span {
+        font-size: 22px;
+    }
+
+    .header-home__title h2 span img {
+        width: 30px;
+    }
+
+    .header-home__logo img {
+        width: 80px;
+    }
+}
+
+@media (max-width: 270px) {
+
+    .header-home {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 146px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }

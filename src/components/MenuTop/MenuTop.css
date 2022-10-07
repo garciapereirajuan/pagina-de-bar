@@ -7,12 +7,12 @@
     padding: 4px 0;
     transition: all ease .2s;
     background: #e6e6e6;
+    z-index: 5;
 }
 
 .menu-top.scroll-static-menu {
     position: fixed;
     top: 0px;
-    z-index: 5;
     background-color: #e6e6e6;
     color: #e6e6e6;
 }

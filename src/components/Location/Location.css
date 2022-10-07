@@ -48,7 +48,7 @@
 .location__title h3 {
     padding: 0 !important;
     margin: 0 !important;
-    font-family: 'Satisfy';
+    font-family: 'Satisfy', 'Segoe Print', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 70px;
     font-weight: bold !important;
     color: #373737 !important;
@@ -59,7 +59,7 @@
     /* height: max-content; */
     padding-top: 48px;
     background: #e6e6e6;
-    font-family: Quicksand;
+    font-family: Quicksand, 'Segoe Print', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: 600;
 }
 
