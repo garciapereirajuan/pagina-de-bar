@@ -8,12 +8,11 @@ import 'antd/es/grid/style/index.css';
 import './OurServices.css';
 
 const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
-
     return (
         <>
             <Helmet>
             </Helmet>
-            <div className='services'>
+            <section id='services' className='services'>
                 <div className='services__line' />
                 <div className='services__content'>
                     <div className={`services__title ${scrollRotateFirst}`}>
@@ -66,7 +65,7 @@ const OurServices = ({ scrollRotateFirst, scrollRotateSecond }) => {
                         </div>
                     </div>
                 </div>
-            </div >
+            </section >
         </>
     )
 }

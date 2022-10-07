@@ -1,10 +1,14 @@
 .Menu {
     padding: 1rem;
     position: relative;
-    background: rgba(255, 255, 255, .2);
-    color: #373737;
+    color: #e6e6e6;
+    background-color: #272727;
     height: 100%;
     font-family: Quicksand, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.Menu h1 {
+    color: #e6e6e6;
 }
 
 .Menu button {
@@ -18,7 +22,7 @@
     top: 1rem;
     right: 1rem;
     cursor: pointer;
-    fill: #373737;
+    fill: #e6e6e6;
     transition: all ease .2s;
 }
 
@@ -26,9 +30,9 @@
     fill: rgba(185, 137, 60, 1);
 }
 
-.Menu div {
-    color: #373737;
-    fill: #37373788;
+.Menu a {
+    color: #e6e6e6;
+    fill: #e6e6e688;
     font-size: 20px;
     margin: 0 -1rem;
     padding: 0.6rem 1rem;
@@ -41,13 +45,13 @@
     transition: all ease .1s;
 }
 
-.Menu div:hover {
+.Menu a:hover {
     transition: all ease .1s;
     color: rgba(185, 137, 60, 1);
     fill: rgba(185, 137, 60, 1);
 }
 
-.Menu div:hover::before {
+.Menu a:hover::before {
     transition: all ease .1s;
     content: "";
     display: block;
@@ -59,6 +63,10 @@
     top: 0;
 }
 
-.Menu div svg {
+.Menu a svg {
     margin-right: 1rem;
+}
+
+.Menu a svg path {
+    fill: #e6e6e6;
 }

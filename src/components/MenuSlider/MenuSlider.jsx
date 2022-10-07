@@ -3,6 +3,12 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { MenuContext } from 'react-flexible-sliding-menu'
 import { BsTranslate } from 'react-icons/bs'
 import { FaHome } from 'react-icons/fa'
+import { Link } from 'react-scroll'
+import { AiFillInstagram } from 'react-icons/ai'
+import { IoLogoWhatsapp } from 'react-icons/io'
+import { IoIosRestaurant } from 'react-icons/io'
+import { GrGallery } from 'react-icons/gr'
+import { BiMapPin } from 'react-icons/bi'
 
 import './MenuSlider.css'
 
@@ -30,52 +36,61 @@ const Menu = () => {
 
     return (
         <div className="Menu">
-            <h1>Menu</h1>
-            <div
-                id={`/${lang}/home`}
-                onClick={() => { navigate(`/${lang}/home`); closeMenu() }}
+            <h1>Social<br />Guaminí<br />Buenos Aires</h1>
+            <Link
+                to='home'
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={() => closeMenu()}
             >
-                <FaHome /> {lang === 'es' ? 'Inicio' : 'Home'}
-            </div>
-            <div
-                id={`/${lang}/our-services`}
-                onClick={() => { navigate(`/${lang}/our-services`); closeMenu() }}
+                <FaHome /> Inicio
+            </Link>
+            <Link
+                to="services"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={() => closeMenu()}
             >
-                <DashboardSVG /> {lang === 'es' ? 'Nuestros servicios' : 'Our services'}
-            </div>
-            <div
-                id={`/${lang}/about-us`}
-                onClick={() => { navigate(`/${lang}/about-us`); closeMenu() }}
+                <IoIosRestaurant /> Te ofrecemos...
+            </Link>
+            <Link
+                to="gallery"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={() => closeMenu()}
             >
-                <DashboardSVG /> {lang === 'es' ? 'Quiénes somos' : 'About us'}
-            </div>
-            <div
-                id={`/${lang}/contact`}
-                onClick={() => { navigate(`/${lang}/contact`); closeMenu() }}
+                <GrGallery /> Galería
+            </Link>
+            <Link
+                to="location"
+                spy={true}
+                smooth={false}
+                duration={10}
+                onClick={() => closeMenu()}
             >
-                <DashboardSVG /> {lang === 'es' ? 'Contacto' : 'Contact us'}
-            </div>
-            <div
-                // id='/'
-                onClick={() => {
-                    const path = location.pathname.split('/')[2]
-
-                    if (lang === 'es') {
-                        setLang('en')
-                        localStorage.setItem('lang', 'en')
-                        navigate(`/en/${path}`)
-                        closeMenu()
-                    } else {
-                        setLang('es')
-                        localStorage.setItem('lang', 'es')
-                        navigate(`/es/${path}`)
-                        closeMenu()
-                    }
-                }
-                }
+                <BiMapPin /> Estamos en...
+            </Link>
+            <a
+                className='social-icon'
+                target='_blank'
+                rel='noreferrer'
+                href='https://instagram.com/social.guamini/'
+                onClick={() => closeMenu()}
             >
-                <BsTranslate /> {lang === 'es' ? 'English' : 'Español'}
-            </div>
+                <AiFillInstagram /> Seguinos
+            </a>
+            <a
+                className='social-icon'
+                target='_blank'
+                rel='noreferrer'
+                href='https://wa.me/+5492914363974'
+                onClick={() => closeMenu()}
+            >
+                <IoLogoWhatsapp /> Escribinos
+            </a>
             <button onClick={closeMenu} className='primary-button'>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -34,6 +34,7 @@
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, .8);
     transition: all ease .2s;
+    margin-right: 8px;
 }
 
 .header-home__logo img:hover {
@@ -81,6 +82,7 @@
 
 .header-home__title h2 span img {
     margin-left: 4px;
+    box-shadow: none;
 }
 
 @media (max-width: 900px) {

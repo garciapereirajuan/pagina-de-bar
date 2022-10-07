@@ -13,16 +13,21 @@
     position: fixed;
     top: 0px;
     z-index: 5;
-    background-color: rgba(255, 255, 255, .9);
-    color: #373737;
+    background-color: #e6e6e6;
+    color: #e6e6e6;
 }
 
-.menu-top div:first-child,
+/* .menu-top.scroll-static-menu a {
+    background-color: #e6e6e6;
+    color: #171717;
+} */
+
+.menu-top a:first-child,
 .menu-top .social-icon {
     width: 60px;
 }
 
-.menu-top div:hover,
+.menu-top a:hover,
 .menu-top .btn-select {
     opacity: 1;
     transition: all ease .4s;
@@ -36,7 +41,7 @@
         0px 4px 8px rgba(0, 0, 0, .3);
 }
 
-.menu-top div:active {
+.menu-top a:active {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, .4);
     -moz-box-shadow: 0px 4px 8px rgba(0, 0, 0, .4);
     -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, .4);

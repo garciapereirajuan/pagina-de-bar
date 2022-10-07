@@ -10,6 +10,7 @@ import OurServices from './components/Services'
 import Location from './components/Location'
 import Gallery from './components/Gallery'
 import Footer from './components/Footer'
+import { Modal } from './components/Modal'
 
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
   const [scrollRotateSecond, setScrollRotateSecond] = useState('')
   const [scrollRotateThird, setScrollRotateThird] = useState('')
   const [scrollRotateFourth, setScrollRotateFourth] = useState('')
+  const [initialPosition, setInitialPosition] = useState(true)
   const [title, setTitle] = useState(<span>Tu bar amigo  <img src={emojiGuiño} width={46} alt='Emoji guiño' /></span>)
   // const [finishAnimationTitle, setFinishAnimationTitle] = useState(false)
 
@@ -32,6 +34,13 @@ function App() {
 
   window.onscroll = function () {
     var y = window.scrollY;
+    console.log(y)
+    if (y === 0) {
+      setInitialPosition(true);
+    }
+    if (y !== 0) {
+      setInitialPosition(false)
+    }
     if (y >= 180) {
       setScrollStaticMenu('scroll-static-menu')
       setScrollRotateFirst('scroll-rotate-first')
@@ -113,13 +122,11 @@ function App() {
       <Banner />
       <main>
         <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
-        <div ref={elementGallery}>{show ? <Gallery /> : null}</div>
-        {/* <Gallery scrollRotateThird={scrollRotateThird} scrollRotateFourth={scrollRotateFourth} /> */}
-        <Location scrollRotateFourth={scrollRotateFourth} />
+        <div ref={elementGallery}><Gallery show={show} initialPosition={initialPosition} /></div>
+        <Location initialPosition={initialPosition} scrollRotateFourth={scrollRotateFourth} />
       </main>
       <Footer />
-    </div >
-
+    </div>
   );
 }
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll'
 import { FaHome, FaFacebook } from 'react-icons/fa'
 import { IoLogoWhatsapp } from 'react-icons/io'
 import { AiFillInstagram } from 'react-icons/ai'
@@ -7,27 +8,27 @@ import './MenuTop.css'
 const MenuTop = () => {
     return (
         <>
-            <div onClick={() => console.log('Ir a home')}>
+            <Link to='home' spy={true} smooth={true} duration={500}>
                 <FaHome />
-            </div>
-            <div className='social-icon'>
-                <IoLogoWhatsapp />
-            </div>
-            <div onClick={() => console.log('Ir a servicios')}>
+            </Link>
+            <Link to="services" spy={true} smooth={true} duration={500}>
                 Te ofrecemos...
-            </div>
-            <div onClick={() => console.log('Ir a galería')}>
+            </Link>
+            <Link to="gallery" spy={true} smooth={true} duration={500}>
                 Galería
-            </div>
-            <div onClick={() => console.log('Estamos en...')}>
+            </Link>
+            <Link to="location" spy={true} smooth={true} duration={0}>
                 Estamos en...
-            </div>
-            <div className='social-icon'>
+            </Link>
+            <a className='social-icon' target='_blank' rel='noreferrer' href='https://instagram.com/social.guamini/'>
                 <AiFillInstagram />
-            </div>
-            <div className='social-icon'>
+            </a>
+            <a className='social-icon' target='_blank' rel='noreferrer' href='https://wa.me/+5492914363974'>
+                <IoLogoWhatsapp />
+            </a>
+            {/* <a className='social-icon'>
                 <FaFacebook />
-            </div>
+            </a> */}
         </>
     )
 }

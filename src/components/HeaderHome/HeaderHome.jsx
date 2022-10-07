@@ -7,7 +7,7 @@ import './HeaderHome.css'
 
 const HeaderHome = ({ changeTitle, title }) => {
     return (
-        <header className='header-home'>
+        <header id='home' className='header-home'>
 
             <div className='header-home__logo' onClick={() => changeTitle(emojiGafas)}>
                 <img src={socialLogo} alt='Social Guaminí, Buenos Aires, Argentina' width='100px' />

@@ -1,5 +1,3 @@
-@import 'antd/es/style/default.css';
-
 .App {
   padding: 0 !important;
   margin: 0 !important;
@@ -27,7 +25,7 @@
   z-index: -1;
 } */
 
-.menu-top div,
+.menu-top a,
 .menu-slider div {
   display: flex;
   justify-content: center;
