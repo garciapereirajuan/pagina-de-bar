@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react'
+import { useEffect, useState, useRef, useContext } from 'react'
 import { FaCopyright } from 'react-icons/fa'
 import { FiMenu } from 'react-icons/fi'
 import { MenuContext } from 'react-flexible-sliding-menu'
@@ -74,6 +74,29 @@ function App() {
     setTitle(<span>Tu bar amigo  <img src={emoji} width={46} alt='Emoji gafas' /></span>)
   }
 
+  const [show, setShow] = useState(false)
+  const elementGallery = useRef()
+
+
+  useEffect(() => {
+    const onChange = (entries, observer) => {
+      const elem = entries[0]
+      console.log(elem)
+      if (elem.isIntersecting) {
+        setShow(true)
+        observer.disconnect()
+      }
+    }
+
+    const observer = new IntersectionObserver(onChange, {
+      rootMargin: '400px'
+    })
+
+    observer.observe(elementGallery.current)
+
+    return () => observer.disconnect()
+  }, [])
+
 
   return (
     <div className="App">
@@ -89,7 +112,8 @@ function App() {
       <div className='banner__background' />
       <Banner />
       <OurServices scrollRotateFirst={scrollRotateFirst} scrollRotateSecond={scrollRotateSecond} />
-      <Gallery scrollRotateThird={scrollRotateThird} scrollRotateFourth={scrollRotateFourth} />
+      <div ref={elementGallery}>{show ? <Gallery /> : null}</div>
+      {/* <Gallery scrollRotateThird={scrollRotateThird} scrollRotateFourth={scrollRotateFourth} /> */}
       <Location scrollRotateFourth={scrollRotateFourth} />
       <Footer />
     </div >

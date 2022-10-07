@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { imgGallery5A, imgGallery5B, imgGallery5C, imgGallery5D, imgGallery5E } from '../../utils/imgGallery'
 import { Row, Col, Image } from 'antd'
 
@@ -9,6 +9,8 @@ import 'antd/es/style/mixins/index.less';
 import './Gallery.css'
 
 const Gallery = ({ scrollRotateThird, scrollRotateFourth }) => {
+
+
     return (
         <div className='gallery'>
             <div className='services__line' />
