@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <MenuProvider MenuComponent={MenuSlider}>
-        <App />
+        {<App /> ? <App /> : 'Cargando...'}
       </MenuProvider>
     </Router>
   </React.StrictMode>

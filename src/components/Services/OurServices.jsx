@@ -41,10 +41,10 @@ const OurServices = ({ scrollRotateFirst }) => {
                         <h3>Te ofrecemos...</h3>
                     </div>
                     <div className='services__content-subtitle'>
-                        <h3>¡Una cena riquísima!</h3>
+                        <h3>¡La mejor comida!</h3>
                     </div>
                     <div className='services__description'>
-                        <p>Acá puede haber una descripción general de la comida. Cómo la sirven, etc..</p>
+                        <p>Acá una descripción general de la comida. O lo que quieras escribir..</p>
                     </div>
                     <div className='services__content-row'>
                         <Row>

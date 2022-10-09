@@ -36,7 +36,7 @@ const Menu = () => {
 
     return (
         <div className="Menu">
-            <h1>Social<br />Guaminí<br />Buenos Aires</h1>
+            <h1>Social<br />Guaminí</h1>
             <Link
                 to='home'
                 spy={true}

@@ -78,7 +78,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5A.map(item =>
                                         <Image src={item.img}
-                                            placeholder='Cargando...'
+                                            placeholder={<Spin />}
                                         />
                                     )
                                 }
@@ -86,28 +86,36 @@ const RenderImages = () => {
                             <div className={`column`}>
                                 {
                                     imgGallery5B.map(item =>
-                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                        <Image src={item.img}
+                                            placeholder={<Spin />}
+                                        />
                                     )
                                 }
                             </div>
                             <div className={`column`}>
                                 {
                                     imgGallery5C.map(item =>
-                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                        <Image src={item.img}
+                                            placeholder={<Spin />}
+                                        />
                                     )
                                 }
                             </div>
                             <div className={`column`}>
                                 {
                                     imgGallery5D.map(item =>
-                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                        <Image src={item.img}
+                                            placeholder={<Spin />}
+                                        />
                                     )
                                 }
                             </div>
                             <div className={`column`}>
                                 {
                                     imgGallery5E.map(item =>
-                                        <Image src={item.img} /> ? <Image src={item.img} /> : <Spin />
+                                        <Image src={item.img}
+                                            placeholder={<Spin />}
+                                        />
                                     )
                                 }
                             </div>

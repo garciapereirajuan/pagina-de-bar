@@ -11,7 +11,7 @@
     margin-top: 50px;
     padding-top: 20px;
     background: #e6e6e6;
-    background-image: url('../../assets/img/jpg/lights-wp-2.jpg');
+    background-image: url('../../assets/img/jpg/lights-wp-3.jpg');
     background-size: cover;
     background-blend-mode: multiply;
 }
@@ -34,9 +34,11 @@
     width: 100%;
 }
 
-.gallery .services__content-subtitle h3,
-.gallery .services__description p {
-    /* color: #e6e6e6; */
+.ant-image-placeholder {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .services__title {
@@ -98,7 +100,7 @@ img {
 @media (max-width: 900px) {
 
     .gallery {
-        background-image: url('../../assets/img/jpg/lights-wp-2.jpg');
+        background-image: url('../../assets/img/jpg/lights-wp-3.jpg');
         background-position: center center;
         /* background-size: contain; */
     }

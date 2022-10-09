@@ -3,12 +3,13 @@ import { Row, Col } from 'antd'
 import { BsClockFill, BsCalendar4 } from 'react-icons/bs'
 import { BiMap, BiMapPin, BiCalendarAlt } from 'react-icons/bi'
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai'
-import imgSocial from '../../assets/img/jpg/social-3.jpg'
+import imgSocial from '../../assets/img/jpg/social-3c.jpg'
 
 import './Location.css'
 
 const Location = ({ initialPosition, scrollRotateFourth }) => {
     const [rotate, setRotate] = useState(false)
+    const [showMap, setShowMap] = useState(false)
     const elemRef = useRef()
 
     useEffect(() => {
@@ -23,6 +24,7 @@ const Location = ({ initialPosition, scrollRotateFourth }) => {
             const elem = entries[0]
             if (elem.isIntersecting) {
                 setRotate(true)
+                setShowMap(true)
                 observer.disconnect()
 
                 console.log(elem)
@@ -78,7 +80,10 @@ const Location = ({ initialPosition, scrollRotateFourth }) => {
                 </Row>
                 <br />
                 <br />
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.4083311707625!2d-62.41931695772733!3d-37.01065811378568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ea413467dffa5f%3A0x7d5f3f72633c2bbb!2sClub%20Social%20Guamin%C3%AD!5e0!3m2!1ses-419!2sar!4v1664992831555!5m2!1ses-419!2sar" width="100%" height="280px" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title='map-social'></iframe>
+                {
+                    showMap &&
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.4083311707625!2d-62.41931695772733!3d-37.01065811378568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ea413467dffa5f%3A0x7d5f3f72633c2bbb!2sClub%20Social%20Guamin%C3%AD!5e0!3m2!1ses-419!2sar!4v1664992831555!5m2!1ses-419!2sar" width="100%" height="280px" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title='map-social'></iframe>
+                }
             </div>
         </section>
     )
