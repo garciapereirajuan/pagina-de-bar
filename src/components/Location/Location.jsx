@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
-import { Row, Col } from 'antd'
+import { Row, Col, Spin } from 'antd'
+import { LoadingOutlined } from '@ant-design/icons'
 import { BsClockFill, BsCalendar4 } from 'react-icons/bs'
 import { BiMap, BiMapPin, BiCalendarAlt } from 'react-icons/bi'
 import { AiOutlineClockCircle, AiOutlineCalendar } from 'react-icons/ai'
@@ -10,6 +11,7 @@ import './Location.css'
 const Location = ({ initialPosition, scrollRotateFourth }) => {
     const [rotate, setRotate] = useState(false)
     const [showMap, setShowMap] = useState(false)
+    const [showSpin, setShowSpin] = useState(false)
     const elemRef = useRef()
 
     useEffect(() => {
@@ -25,6 +27,7 @@ const Location = ({ initialPosition, scrollRotateFourth }) => {
             if (elem.isIntersecting) {
                 setRotate(true)
                 setShowMap(true)
+                setShowSpin(true)
                 observer.disconnect()
 
                 console.log(elem)
@@ -37,6 +40,17 @@ const Location = ({ initialPosition, scrollRotateFourth }) => {
         observer.observe(elemRef.current)
     }, [initialPosition])
 
+    useEffect(() => {
+        showSpin && setTimeout(() => setShowSpin(false), 8000)
+    }, [showSpin])
+
+    const loadIcon = (
+        <LoadingOutlined
+            style={{ fontSize: 24 }}
+            spin
+        />
+    )
+
     return (
         <section id='location' className='location'>
             <div className='services__line' />
@@ -47,7 +61,7 @@ const Location = ({ initialPosition, scrollRotateFourth }) => {
                 <Row>
                     <Col xs={0} sm={0} md={0} lg={1} />
                     <Col xs={24} sm={24} md={24} lg={7} className='location__content-img'>
-                        <img src={imgSocial} width='300px' />
+                        <img src={imgSocial} width='300px' alt='Puerta principal del Social' />
                     </Col>
                     <Col xs={0} sm={0} md={0} lg={1} />
                     <Col xs={24} sm={12} md={12} lg={7} className='location__content-col'>
@@ -80,10 +94,18 @@ const Location = ({ initialPosition, scrollRotateFourth }) => {
                 </Row>
                 <br />
                 <br />
-                {
-                    showMap &&
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.4083311707625!2d-62.41931695772733!3d-37.01065811378568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ea413467dffa5f%3A0x7d5f3f72633c2bbb!2sClub%20Social%20Guamin%C3%AD!5e0!3m2!1ses-419!2sar!4v1664992831555!5m2!1ses-419!2sar" width="100%" height="280px" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title='map-social'></iframe>
-                }
+                {/* <Spin tip='Cargando el mapa...' indicator={loadIcon} /> */}
+                <div className='location__map'>
+                    {
+                        showSpin &&
+                        <Spin className='spin' tip='Cargando el mapa...' indicator={loadIcon} />
+                    }
+                    {
+                        showMap &&
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1126.4083311707625!2d-62.41931695772733!3d-37.01065811378568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95ea413467dffa5f%3A0x7d5f3f72633c2bbb!2sClub%20Social%20Guamin%C3%AD!5e0!3m2!1ses-419!2sar!4v1664992831555!5m2!1ses-419!2sar" width="100%" height="280px" style={{ border: 0 }} allowFullScreen="" loading='lazy' referrerPolicy="no-referrer-when-downgrade" title='map-social'>
+                        </iframe>
+                    }
+                </div>
             </div>
         </section>
     )

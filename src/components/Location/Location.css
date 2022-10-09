@@ -141,6 +141,16 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, .7);
 }
 
+.location__map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.location .spin {
+    position: absolute;
+}
+
 .services__title.scroll-rotate-fourth {
     transition: all ease 1s;
     rotate: -10deg;

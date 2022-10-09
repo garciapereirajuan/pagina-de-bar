@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import { imgGallery5A, imgGallery5B, imgGallery5C, imgGallery5D, imgGallery5E } from '../../utils/imgGallery'
 import { Row, Col, Image, Spin } from 'antd'
 import emojiHeart from '../../assets/img/png/emoji-heart.png'
+import { LoadingOutlined } from '@ant-design/icons'
 
 import 'antd/es/image/style/index.css'
 
@@ -62,6 +63,13 @@ const Gallery = ({ initialPosition, setScrollSmooth }) => {
 const RenderImages = () => {
     const [visible, setVisible] = useState(false)
 
+    const loadIcon = (
+        <LoadingOutlined
+            style={{ fontSize: 24 }}
+            spin
+        />
+    )
+
     return (
         <div className='gallery__content'>
             <Row>
@@ -78,7 +86,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5A.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin />}
+                                            placeholder={<Spin indicator={loadIcon} />}
                                         />
                                     )
                                 }
@@ -87,7 +95,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5B.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin />}
+                                            placeholder={<Spin indicator={loadIcon} />}
                                         />
                                     )
                                 }
@@ -96,7 +104,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5C.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin />}
+                                            placeholder={<Spin indicator={loadIcon} />}
                                         />
                                     )
                                 }
@@ -105,7 +113,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5D.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin />}
+                                            placeholder={<Spin indicator={loadIcon} />}
                                         />
                                     )
                                 }
@@ -114,7 +122,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5E.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin />}
+                                            placeholder={<Spin indicator={loadIcon} />}
                                         />
                                     )
                                 }
