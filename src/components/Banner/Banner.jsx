@@ -8,7 +8,7 @@ const Banner = () => {
         <section className='banner'>
             <div className='text'>
                 <p>Tenemos<br /> los mejores traguitos<br /> y la comida más rica</p>
-                <p>OPEN DOOR<br /><span>19:30hs</span></p>
+                <p>DESDE LAS<br /><span>19:30hs</span></p>
             </div>
             {/* <img src={imgBanner} alt='Bebidas alcoholicas' /> */}
         </section>

@@ -109,7 +109,10 @@
 }
 
 @media (max-width: 575px) {
-
+    .banner {
+        height: calc(100vh - 248px);
+        min-height: 400px;
+    }
 
     .banner .text {
         font-size: 34px;
