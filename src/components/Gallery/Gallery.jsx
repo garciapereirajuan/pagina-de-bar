@@ -86,7 +86,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5A.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin indicator={loadIcon} />}
+                                            placeholder={<Spin />}
                                         />
                                     )
                                 }
@@ -95,7 +95,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5B.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin indicator={loadIcon} />}
+                                            placeholder={<Spin />}
                                         />
                                     )
                                 }
@@ -104,7 +104,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5C.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin indicator={loadIcon} />}
+                                            placeholder={<Spin />}
                                         />
                                     )
                                 }
@@ -113,7 +113,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5D.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin indicator={loadIcon} />}
+                                            placeholder={<Spin />}
                                         />
                                     )
                                 }
@@ -122,7 +122,7 @@ const RenderImages = () => {
                                 {
                                     imgGallery5E.map(item =>
                                         <Image src={item.img}
-                                            placeholder={<Spin indicator={loadIcon} />}
+                                            placeholder={<Spin />}
                                         />
                                     )
                                 }
